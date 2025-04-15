@@ -173,9 +173,7 @@ const AppRoutes = () => {
           </React.Suspense>
         }
       >
-        <Route index element={<React.Suspense fallback={<LoadingSpinner />}>
-          <CandidateDashboard />
-        </React.Suspense>} />
+        
       </Route>
       
     </Routes>
