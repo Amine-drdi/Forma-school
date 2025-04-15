@@ -70,17 +70,7 @@ const Footer = () => {
       maxWidth: "200px", // Largeur pour limiter l'étalement
     }}
   >
-    <li>
-      <NavLink
-        to="/formations/categorie/sante"
-        className="hover:opacity-80 hover:underline"
-        style={{ fontSize: '10px' }}
-      >
-        Santé
-      </NavLink>
-    </li>
-    <li><NavLink to="/formations/categorie/btp" className="hover:underline">
-    Juridique et administrative</NavLink></li>
+ 
 
     <li>
       <NavLink

@@ -6,20 +6,9 @@ const Hero = ({ setShowInscriptionForm }) => {
       <div className="flex flex-col gap-4 max-w-3xl">
         <p className="text-2xl font-bold">Formation Plaies et cicatrisation</p>
         <p className="text-sm">
-          Les plaies posent un défi de santé considérable, tant en ce qui
-          concerne la qualité de vie des patients que sur le plan économique, en
-          raison du vieillissement de la population et de l'augmentation des
-          maladies métaboliques. Dans ce contexte, les infirmiers jouent un rôle
-          essentiel dans la gestion des plaies. De l'évaluation du type de plaie
-          et de son stade, à la prévention des complications, en passant par la
-          transmission d'informations aux différents professionnels de la santé,
-          ils sont les acteurs centraux et privilégiés de la prise en charge,
-          travaillant au plus près des soins et participant à la mise en œuvre
-          des protocoles adaptés. La formation Plaies et Cicatrisation 2023 vous
-          permettra d'adapter au mieux votre pratique selon les situations en
-          renforçant votre savoir du processus de cicatrisation et des types de
-          plaie, de la plus simple à la plus complexe : escarres, ulcères, pied
-          diabétique et brûlures.
+        Le secteur du bâtiment présente de nombreux défis, tant sur le plan de la sécurité des chantiers que de la qualité des réalisations. Face à l’évolution rapide des techniques de construction, des normes environnementales et de la réglementation, les professionnels du BTP doivent continuellement renforcer leurs compétences. Maîtriser les bonnes pratiques, prévenir les risques, optimiser l’organisation et appliquer les protocoles de sécurité sont autant d’enjeux au quotidien. La formation BTP 2023 vous permettra d’adapter efficacement votre pratique sur le terrain, en consolidant vos connaissances techniques, votre compréhension des normes en vigueur, et votre capacité à gérer des situations complexes sur les chantiers.
+
+
         </p>
         <div className="flex flex-row items-center gap-4">
           <img

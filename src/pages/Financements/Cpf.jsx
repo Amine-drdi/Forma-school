@@ -60,7 +60,7 @@ const Tab = () => {
           <h2 className="text-2xl font-semibold text-primary text-center mb-4">Pourquoi utiliser votre CPF pour nos formations ?</h2>
           <ul className="space-y-3">
             <li className="flex items-center text-gray-700 ml-32"><FaCheckCircle className="text-blue-500 mr-2" /> Financement accessible sans avance de frais</li>
-            <li className="flex items-center text-gray-700 ml-32"><FaCheckCircle className="text-green-500 mr-2" /> Formations adaptées aux besoins des professionnels du bâtiment et de la santé</li>
+            <li className="flex items-center text-gray-700 ml-32"><FaCheckCircle className="text-green-500 mr-2" /> Formations adaptées aux besoins des professionnels du bâtiment  </li>
             <li className="flex items-center text-gray-700 ml-32"><FaCheckCircle className="text-yellow-500 mr-2" /> Diplômes et certifications reconnues par l’État</li>
             <li className="flex items-center text-gray-700 ml-32"><FaCheckCircle className="text-purple-500 mr-2" /> Apprentissage en ligne ou en présentiel selon vos préférences</li>
           </ul>

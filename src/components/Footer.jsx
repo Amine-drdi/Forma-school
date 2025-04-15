@@ -36,10 +36,8 @@ const Footer = () => {
           <div>
             <p className="text-white font-semibold mb-3">Découvrir Forma school</p>
             <ul className="space-y-2">
-              <li><NavLink to="/formations/categorie/sante" className="hover:text-orange-400">Santé</NavLink></li>
-              <li><NavLink to="/formations/categorie/btp" className="hover:text-orange-400">Bâtiment</NavLink></li>
-              <li><NavLink to="/formations/juridique/juridique-et-administrative" className="hover:text-orange-400">Juridique et Administrative</NavLink></li>
-              <li><NavLink to="/a-propos" className="hover:text-orange-400">Qui sommes-nous</NavLink></li>
+               <li><NavLink to="/formations/categorie/btp" className="hover:text-orange-400">Bâtiment</NavLink></li>
+               <li><NavLink to="/a-propos" className="hover:text-orange-400">Qui sommes-nous</NavLink></li>
               <li><NavLink to="/contact" className="hover:text-orange-400">Contactez-nous</NavLink></li>
             </ul>
           </div>

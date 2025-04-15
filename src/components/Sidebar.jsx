@@ -44,10 +44,10 @@ const Sidebar = () => {
           </div>
           <div className="flex flex-col justify-center">
             <NavLink
-              to="/AllTrainings"
+              to="/formations/categorie/btp"
               onClick={() => setActiveMenu(!activeMenu)}
             >
-              Nos formations BTP
+              Nos formations BTP 
             </NavLink>
           </div>
           <div className="flex flex-col justify-center">

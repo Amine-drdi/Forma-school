@@ -8,13 +8,18 @@ import { btpCategories } from "../assets/data/categories";
 const Header = () => {
   const { activeMenu, setActiveMenu } = useAppContext();
   const location = useLocation();
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const btpRef = useRef(null);
+  const financeRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
+      if (
+        (btpRef.current && !btpRef.current.contains(e.target)) &&
+        (financeRef.current && !financeRef.current.contains(e.target))
+      ) {
+        setOpenDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -38,29 +43,20 @@ const Header = () => {
         <NavLink to="/" className="text-gray-700 hover:text-primary">Accueil</NavLink>
 
         {/* BTP Dropdown */}
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative" ref={btpRef}>
           <button
-            onClick={() => setDropdownOpen(!isDropdownOpen)}
+            onClick={() => setOpenDropdown(openDropdown === "btp" ? null : "btp")}
             className={`flex items-center gap-1 px-3 py-2 rounded-md font-medium text-gray-700 hover:text-primary hover:bg-primary/10 transition ${
               location.pathname.includes("/formations") ? "text-primary" : ""
             }`}
           >
             BTP
-            <HiChevronDown
-              className={`w-4 h-4 transition-transform duration-200 ${
-                isDropdownOpen ? "rotate-180" : ""
-              }`}
-            />
+            <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === "btp" ? "rotate-180" : ""}`} />
           </button>
 
-          {isDropdownOpen && (
-            
-            <div
-              className="absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white border border-gray-200 shadow-xl rounded-xl p-6 w-[90vw] max-w-6xl z-50 pr-10"
-            >
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                Nos formations BTP
-              </h3>
+          {openDropdown === "btp" && (
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white border border-gray-200 shadow-xl rounded-xl p-6 w-[90vw] max-w-6xl z-50 pr-10">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Nos formations BTP</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mr-10">
                 {btpCategories.map((cat) => (
                   <NavLink
@@ -76,22 +72,49 @@ const Header = () => {
           )}
         </div>
 
+        {/* Financements Dropdown */}
+        <div className="relative" ref={financeRef}>
+          <button
+            onClick={() => setOpenDropdown(openDropdown === "finance" ? null : "finance")}
+            className={`flex items-center gap-1 px-3 py-2 rounded-md font-medium text-gray-700 hover:text-primary hover:bg-primary/10 transition ${
+              ["/CPF", "/Opco", "/poleEmploi", "/fiphfp", "/agefiph"].some((p) =>
+                location.pathname.includes(p)
+              )
+                ? "text-primary"
+                : ""
+            }`}
+          >
+            Financements
+            <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === "finance" ? "rotate-180" : ""}`} />
+          </button>
+
+          {openDropdown === "finance" && (
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white border border-gray-200 shadow-xl rounded-xl p-6 w-[90vw] max-w-6xl z-50 pr-10">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Nos solutions de financement</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mr-10">
+                {[
+                  { id: "CPF", name: "CPF" },
+                  { id: "Opco", name: "OPCO" },
+                  { id: "poleEmploi", name: "Pôle Emploi" },
+                  { id: "fiphfp", name: "FIPHFP" },
+                  { id: "agefiph", name: "AGEFIPH" },
+                ].map((fin) => (
+                  <NavLink
+                    key={fin.id}
+                    to={`/${fin.id}`}
+                    className="block bg-gray-50 hover:bg-primary/10 hover:text-primary text-gray-800 border border-gray-200 px-5 py-3 rounded-lg text-sm transition duration-200 shadow-sm"
+                  >
+                    {fin.name}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
         <NavLink to="/a-propos" className="text-gray-700 hover:text-primary">Qui sommes-nous ?</NavLink>
         <NavLink to="/contact" className="text-gray-700 hover:text-primary">Contact</NavLink>
-        <NavLink
-          to="/connexion"
-          className="px-4 py-2 bg-primary text-white rounded-full hover:bg-secondary hover:text-primary transition"
-        >
-          Connexion
-        </NavLink>
       </nav>
-
-      {/* Mobile Account */}
-      <div className="lg:hidden">
-        <NavLink to="/connexion">
-          <MdOutlineAccountCircle className="w-7 h-7 text-gray-700" />
-        </NavLink>
-      </div>
     </header>
   );
 };

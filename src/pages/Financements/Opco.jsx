@@ -137,13 +137,7 @@ Leur objectif est de faciliter l’accès à la formation en prenant en charge t
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div>
-                    <p className="text-lg font-semibold">OPCO Santé</p>
-                    <p className="text-sm text-gray-600">
-                    Opérateur de compétence des secteurs des professions de la santé et médico-social                    </p>
-                  </div>
-                </div>
+           
                 
               </div>
               </div>

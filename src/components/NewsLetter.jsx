@@ -8,12 +8,9 @@ import { MdEmail } from "react-icons/md";
 const schema = yup.object().shape({
   email: yup
     .string()
-    .email()
-    .matches(
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-      "Email non valide"
-    )
-    .required(),
+    .email("Email invalide")
+    .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Email non valide")
+    .required("L'adresse email est requise"),
 });
 
 const NewsLetter = () => {
@@ -36,38 +33,42 @@ const NewsLetter = () => {
 
   return (
     <Toast.Provider swipeDirection="right">
-      <section className="flex justify-center xl:px-24 md:px-16 sm:px-10 px-6 py-24 bg-white w-full">
-        <div className="relative flex flex-col lg:flex-row gap-8 sm:p-12 p-10 items-center bg-gray-50 rounded-lg shadow-lg max-w-6xl">
-          <div className="flex flex-col gap-6 w-full lg:w-1/2">
-            <h2 className="md:text-3xl text-2xl font-semibold text-gray-800 text-left">
+      <section className="w-full bg-white px-4 md:px-12 xl:px-24 py-20">
+        <div className="relative flex flex-col lg:flex-row items-center gap-10 bg-gray-50 rounded-xl shadow-xl p-6 sm:p-10 md:p-14 max-w-6xl mx-auto">
+          {/* Icon */}
+          <div className="lg:absolute lg:-top-6 lg:right-6 w-20 h-20 lg:w-28 lg:h-28 rounded-full bg-orange-500 border-4 border-white flex justify-center items-center shadow-md self-center lg:self-start">
+          <MdEmail className="text-white text-3xl lg:text-4xl" />
+          </div>
+
+          {/* Text & Form */}
+          <div className="w-full lg:w-2/3 flex flex-col gap-6">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800">
               Inscrivez-vous à notre newsletter
             </h2>
-            <p className="md:text-lg text-sm text-gray-600 leading-7">
-              Restez informé de nos actualités, formations et meilleures astuces
-              pour vous améliorer !
+            <p className="text-sm sm:text-base text-gray-600">
+              Restez informé de nos actualités, formations et meilleures astuces pour vous améliorer !
             </p>
-            <form
-              className="flex flex-col sm:flex-row gap-4"
-              onSubmit={handleSubmit(submit)}
-            >
+
+            <form onSubmit={handleSubmit(submit)} className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
-                className={`${
-                  errors.email ? "border-2 border-red-500" : "border-transparent"
-                } w-full sm:w-80 h-12 px-6 py-3 rounded-full bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500`}
                 placeholder="Entrez votre adresse email"
                 {...register("email")}
+                className={`w-full sm:w-72 px-5 py-3 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 ${
+                  errors.email ? "border-2 border-red-500" : "border border-transparent"
+                }`}
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto h-12 px-8 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-all duration-300"
+                className="w-full sm:w-auto px-6 py-3 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition"
               >
                 S'inscrire
               </button>
             </form>
-          </div>
-          <div className="absolute z-20 lg:-right-16 right-8 lg:-top  w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-orange-500 flex justify-center items-center border-4 border-white">
-            <MdEmail className="text-white text-4xl" />
+
+            {errors.email && (
+              <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
+            )}
           </div>
         </div>
       </section>
@@ -86,14 +87,14 @@ const NewsLetter = () => {
           </p>
         </Toast.Description>
         <Toast.Action
-          className="absolute top-4 right-4 inline-flex h-[25px] items-center justify-center rounded-md px-2.5 text-xs font-medium text-gray-500"
+          className="absolute top-4 right-4 text-xs text-gray-500 hover:text-gray-700"
           asChild
-          altText="Close"
+          altText="Fermer"
         >
-          <button className="text-gray-500 hover:text-gray-700">X</button>
+          <button>X</button>
         </Toast.Action>
       </Toast.Root>
-      <Toast.Viewport className="fixed bottom-0 right-0 z-[2147483647] m-0 flex w-[390px] max-w-[100vw] list-none flex-col gap-2.5 p-[var(--viewport-padding)] outline-none" />
+      <Toast.Viewport className="fixed bottom-0 right-0 z-50 m-4 flex w-[390px] max-w-[100vw] flex-col gap-2.5 outline-none" />
     </Toast.Provider>
   );
 };

@@ -4,8 +4,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 
 
 const Home = React.lazy(() => import("./pages/home"));
-const AllTrainings = React.lazy(() => import("./pages/home/AllTrainings"));
-const AllFinance = React.lazy(() => import("./pages/home/AllFinance"));
+ const AllFinance = React.lazy(() => import("./pages/home/AllFinance"));
  const Trainings3 = React.lazy(() => import("./pages/trainingsBtp"));
 const SearchTrainings = React.lazy(() => import("./pages/searchTrainings"));
  const TrainingBtpDetails = React.lazy(() => import("./pages/trainingBtpDetails"));
@@ -46,14 +45,7 @@ const AppRoutes = () => {
           </React.Suspense>
         }
       />
-      <Route
-          path="/AllTrainings"
-        element={
-          <React.Suspense fallback={<LoadingSpinner />}>
-            <AllTrainings />
-          </React.Suspense>
-        }
-      />
+      
       
         <Route
           path="/AllFinance"
@@ -185,13 +177,7 @@ const AppRoutes = () => {
           <CandidateDashboard />
         </React.Suspense>} />
       </Route>
-      <Route path="/connexion" element={<Authentication />}>
-        <Route index element={<Login />} />
-        <Route path="inscrire" element={<Register />} />
-        <Route path="mot-de-passe-oublie" element={<ForgotPassword />} />
-       
-       
-      </Route>
+      
     </Routes>
   );
 };

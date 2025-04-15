@@ -22,10 +22,22 @@ const OurApproach = () => {
         {/* Grid Responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center">
           {[
-            { title: "Accessibilité", text: "Des formations en ligne disponibles partout et à tout moment, adaptées aux besoins des professionnels de la santé." },
-            { title: "Qualité", text: "Contenus créés et validés par des médecins et experts, garantissant des informations fiables et actuelles." },
-            { title: "Innovation", text: "Utilisation d’outils interactifs et de technologies modernes pour un apprentissage pratique et engageant." },
-            { title: "Accompagnement", text: "Un suivi personnalisé pour guider les apprenants tout au long de leur parcours et répondre à leurs questions." }
+            {
+              title: "Accessibilité",
+              text: "Formations disponibles en ligne et en présentiel, pour les professionnels du bâtiment partout en Tunisie.",
+            },
+            {
+              title: "Qualité",
+              text: "Contenus conçus par des experts du secteur BTP pour répondre aux exigences actuelles du marché.",
+            },
+            {
+              title: "Innovation",
+              text: "Utilisation de simulateurs, vidéos 3D et outils interactifs pour un apprentissage immersif.",
+            },
+            {
+              title: "Accompagnement",
+              text: "Suivi pédagogique personnalisé pour garantir la montée en compétence des apprenants.",
+            },
           ].map((item, index) => (
             <div
               key={index}
