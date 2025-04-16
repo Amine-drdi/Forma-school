@@ -10,7 +10,11 @@ const Hero = ({  formation }) => {
         {formation.description}        </p>
         <div className="flex flex-row items-center gap-4">
         </div>
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> 173c59b98d3cc08e3b6191606abbe386c0b18da6
       </div>
       <div className="w-1/2 h-full absolute right-0 bottom-0 top-0 -z-10">
         <img

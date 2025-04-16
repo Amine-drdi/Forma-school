@@ -24,7 +24,7 @@ const OurApproach = () => {
           {[
             {
               title: "Accessibilité",
-              text: "Formations disponibles en ligne et en présentiel, pour les professionnels du bâtiment partout en Tunisie.",
+              text: "Formations disponibles en ligne et en présentiel, pour les professionnels du bâtiment partout en France.",
             },
             {
               title: "Qualité",

@@ -25,9 +25,9 @@ const OurImpact = () => {
         </div>
         <div className="flex flex-wrap items-center sm:justify-between justify-center max-sm:gap-6 text-black">
           {[
-            { end: 120, label1: "formations spécialisées", label2: "couvrant divers domaines" },
-            { end: 10000, label1: "Professionnels", label2: "ont suivi nos formations" },
-            { end: 24, label1: "Experts", label2: "offrant un contenu précis" }
+            { end: 17, label1: "formations spécialisées", label2: "dans le domaine du BTP" },
+            { end: 6234, label1: "Professionnels", label2: "ont suivi nos formations" },
+            { end: 21, label1: "Experts", label2: "offrant un contenu précis" }
           ].map(({ end, label1, label2 }, index) => (
             <div key={index} className="p-4 flex flex-col gap-6 text-center">
               <p className="text-5xl leading-10 font-semibold mb-4 text-primary">
