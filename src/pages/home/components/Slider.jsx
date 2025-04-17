@@ -1,83 +1,80 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
-const Slider = () => {
-  const videoRef = useRef(null);
-  const [loopMode, setLoopMode] = useState(false);
+// Animation horizontale (de gauche à droite)
+const textVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.3, duration: 0.6, ease: "easeOut" },
+  }),
+};
 
-  const handleSlideChange = () => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
-    }
-  };
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-
-    const numberOfSlides = 1;
-    if (numberOfSlides > 1) {
-      setLoopMode(true);
-    }
-  }, []);
-
+const Hero = () => {
   return (
-    <Swiper
-      slidesPerView={1}
-      spaceBetween={30}
-      loop={loopMode}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      speed={600}
-      onSlideChange={handleSlideChange}
-      modules={[Autoplay]}
-      className="w-full"
-    >
-      <SwiperSlide>
-        <section className="relative flex items-center justify-center h-screen overflow-hidden">
-          {/* Vidéo en fond sans assombrissement */}
-          <video
-            ref={videoRef}
-            className="absolute inset-0 w-full h-full object-cover"
-            muted
-            playsInline
-            loop
+    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-tr from-orange-50 via-white to-white overflow-hidden">
+      
+      {/* Texte à gauche avec animation */}
+      <div className="w-full md:w-1/2 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24 text-left space-y-6">
+        <motion.h1
+          custom={0}
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight"
+        >
+          🎓 Rejoignez notre communauté de professionnels du BTP !
+        </motion.h1>
+
+        <motion.p
+          custom={1}
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          className="text-lg lg:text-xl text-orange-500 font-semibold leading-relaxed"
           >
-            <source src="/videos/btp_video.mp4" type="video/mp4" />
-          </video>
+          Formez-vous pour bâtir l'avenir en toute sécurité !
+        </motion.p>
 
-          {/* Overlay plus léger pour lisibilité */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent z-10" />
+        <motion.p
+          custom={2}
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          className="text-base lg:text-lg text-gray-700 leading-relaxed"
+        >
+          Accédez à des formations certifiées en BTP : CACES® R482, R486, R489, échafaudages,
+          habilitations électriques B0 à H2, FEEBAT RENOVE, sécurité et SST.
+        </motion.p>
 
-          {/* Contenu principal */}
-          <div className="relative z-20 px-6 text-center text-white max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-md">
-              🎓 Rejoignez notre communauté de professionnels du BTP !
-            </h1>
-            <h2 className="text-xl md:text-3xl font-semibold text-orange-400 mb-4 drop-shadow">
-              Formez-vous pour bâtir l'avenir en toute sécurité !
-            </h2>
-            <p className="text-sm md:text-base mb-6 drop-shadow">
-              Accédez à des formations certifiées en BTP : CACES® R482, R486, R489, échafaudages, habilitations électriques B0 à H2, FEEBAT RENOVE, sécurité et SST.
-            </p>
-            <NavLink
-              to="/formations/categorie/btp"
-              className="inline-block bg-orange-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-white hover:text-orange-500 transition duration-300"
-            >
-              Découvrir notre catalogue BTP
-            </NavLink>
-          </div>
-        </section>
-      </SwiperSlide>
-    </Swiper>
+        <motion.div
+          custom={3}
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+        >
+          <NavLink
+            to="/formations"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 w-fit inline-block"
+          >
+            Découvrir les formations
+          </NavLink>
+        </motion.div>
+      </div>
+
+      {/* Image à droite */}
+      <div className="w-full md:w-1/2 h-full relative">
+        <img
+          src="/images/construction-training.jpg"
+          alt="formation btp"
+          className="w-full h-full object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-sm" />
+      </div>
+    </section>
   );
 };
 
-export default Slider;
+export default Hero;
