@@ -30,9 +30,9 @@ const HealthAndConstructionTrainings = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#f9d9b0] to-[#f7a33e] py-16 flex flex-col gap-14 px-4 md:px-10 lg:px-20">
-      <div className="flex flex-col gap-6 bg-white p-8 rounded-xl shadow-xl max-w-5xl mx-auto">
-        <p className="font-bold text-3xl text-[#c86104] text-left">{title}</p>
+    <div className="w-full bg-white py-16 flex flex-col gap-14 px-4 md:px-10 lg:px-20">
+      <div className="flex flex-col gap-6  p-2  max-w-5xl mx-auto">
+        <p className="font-bold text-2xl text-black text-left">{title}</p>
         <p className="text-gray-700 text-base md:text-lg text-left">{description}</p>
       </div>
 

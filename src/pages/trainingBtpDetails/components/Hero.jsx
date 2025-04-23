@@ -2,23 +2,28 @@ import React from "react";
 
 const Hero = ({  formation }) => {
   return (
-    <div className="relative flex h-full w-full py-12 md:px-desktop_padding sm:px-tablet_padding px-mobile_padding md:bg-[#d6e0f5]/50 bg-[#d6e0f5]">
-      <div className="flex flex-col gap-4 max-w-3xl">
-        <p className="text-2xl font-bold"  style={{marginRight :"220px"}}>
-          {formation.title}</p>
-        <p className="text-sm" style={{marginRight :"220px"}}>
-        {formation.description}        </p>
-        <div className="flex flex-row items-center gap-4">
+    <section className="relative bg-[#e8f0fc] overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-6 py-16 md:py-24">
+        {/* Texte */}
+        <div className="text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">
+            {formation.title}
+          </h1>
+          <p className="text-base sm:text-lg text-gray-600">
+            {formation.description}
+          </p>
+        </div>
+
+        {/* Image */}
+        <div className="w-full h-64 md:h-96 relative">
+          <img
+            src={formation.image}
+            alt="Illustration de la formation"
+            className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-md"
+          />
         </div>
       </div>
-      <div className="w-1/2 h-full absolute right-0  bottom-0 top-0 -z-10">
-        <img
-          src={formation.image}
-          alt="Hero Formation Plaies et Cicatrisation"
-          className="object-cover w-full h-full"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

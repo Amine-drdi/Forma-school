@@ -56,7 +56,7 @@ const Hero = () => {
           variants={textVariants}
         >
           <NavLink
-            to="/formations"
+            to="/formations/categorie/btp"
             className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 w-fit inline-block"
           >
             Découvrir les formations

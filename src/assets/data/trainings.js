@@ -3387,228 +3387,155 @@ certification: "Une attestation de formation sera délivrée."
 ];
 
 export const btpTrainings = [
-/*{
-id: 0,
-image:
- "https://tmr.tn/wp-content/uploads/2019/07/TRACTOPELLE-MANOUBA-07-01.jpg",
-title: "CACES R482 catégorie A, B1 et F",
-duration: "24H",
-instructors: "Jean-François Renucci",
-},
+
+  {
+    id: 5,
+    image: "https://www.godet.fr/wp-content/uploads/2023/04/chute-objets-travaux-hauteur.jpg",
+    duration: "14 heures (2 jours)",
+    title: "Travail en Hauteur et Prévention des Risques",
+    description: `
+    Cette formation s’adresse aux professionnels du bâtiment exposés aux risques de chute dans le cadre de travaux en hauteur. 
+    Elle fournit les connaissances et compétences nécessaires pour travailler en sécurité, tout en respectant la réglementation en vigueur.
+    `,
+    ProchaineSession: "15/04",
+    DPC: "11223344556",
+    Duree: "14 heures (2 jours)",
+    Financements: "DPC, OPCO",
+    
+    objectives: [
+     "Comprendre les risques liés au travail en hauteur et les prévenir efficacement.",
+     "Maîtriser l’utilisation des équipements de protection individuelle (EPI).",
+     "Savoir mettre en place des dispositifs de sécurité adaptés au chantier.",
+     "Identifier les responsabilités légales liées au travail en hauteur."
+    ],
+    
+    publicCible: [
+     "Travailleurs du BTP réalisant des interventions en hauteur.",
+     "Chefs de chantier et superviseurs responsables de la sécurité des équipes."
+    ],
+    
+    prerequis: [
+     "Être apte médicalement au travail en hauteur."
+    ],
+    
+    skills: [
+     "Identification des risques liés aux travaux en hauteur.",
+     "Maîtrise des équipements de protection individuelle (EPI).",
+     "Compétences en mise en œuvre des dispositifs de sécurité sur le chantier.",
+     "Connaissance des obligations légales et responsabilités liées au travail en hauteur."
+    ],
+    
+    programme: {
+     id: "4",
+     title: "Programme de Formation",
+     parts: [
+         {
+             title: "Module 1 : Réglementation et responsabilités",
+             duration: "3 heures",
+             sections: [
+                 "Les obligations légales du salarié et de l’employeur.",
+                 "La réglementation applicable (Code du travail, normes européennes)."
+             ]
+         },
+         {
+             title: "Module 2 : Analyse des risques et prévention",
+             duration: "3 heures",
+             sections: [
+                 "Identifier les situations à risque.",
+                 "Comprendre les causes des chutes et adopter les bonnes pratiques."
+             ]
+         },
+         {
+             title: "Module 3 : Utilisation des équipements de protection individuelle (EPI)",
+             duration: "3 heures",
+             sections: [
+                 "Présentation des différents types d’EPI (harnais, longes, points d’ancrage).",
+                 "Techniques de vérification, ajustement et entretien des équipements."
+             ]
+         },
+         {
+             title: "Module 4 : Mise en œuvre des dispositifs de sécurité",
+             duration: "3 heures",
+             sections: [
+                 "Installation des lignes de vie.",
+                 "Techniques de travail sécurisées (échafaudages, nacelles, cordes).",
+                 "Plan de sauvetage et conduite à tenir en cas d’incident."
+             ]
+         },
+         {
+             title: "Module 5 : Mise en situation pratique",
+             duration: "2 heures",
+             sections: [
+                 "Exercices sur site sécurisé pour tester les compétences.",
+                 "Simulations d’intervention en hauteur avec équipement complet."
+             ]
+         }
+     ]
+    },
+    
+    equipePedagogique: [
+     "Experts en prévention des risques professionnels.",
+     "Formateurs spécialisés dans les travaux en hauteur et l’utilisation des EPI."
+    ],
+    
+    moyensPedagogiques: [
+     "Équipements conformes aux normes en vigueur (harnais, nacelles, échafaudages).",
+     "Supports pédagogiques multimédias.",
+     "Mises en situation sur des sites sécurisés."
+    ],
+    
+    dispositifEvaluation: [
+     "QCM : Validation des connaissances théoriques (minimum 70% de bonnes réponses).",
+     "Exercice pratique : Installation d’un dispositif de sécurité et réalisation de travaux en hauteur simulés."
+    ],
+    
+    certification: 
+    "Une attestation de compétence sera remise, validant les capacités des participants à intervenir en hauteur en toute sécurité.",
+    
+    professionals: [
+     {
+         name: "Michel Lemoine",
+         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHjPVegSEn22Lgdqv9UffwjeIb0WBG1eSoUQ&s",
+         profession: "Chef de chantier en sécurité",
+         comment: "La formation m’a permis d’approfondir mes connaissances des risques liés au travail en hauteur et de mieux préparer mes équipes pour travailler en toute sécurité.",
+     },
+     {
+         name: "Sophie Bernard",
+         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf7SPZtXwHUKCL-7od21oyOzHCOZCLSIsDVQ&s",
+         profession: "Formatrice en prévention des risques",
+         comment: "Cette formation est essentielle pour garantir la sécurité des travailleurs en hauteur, avec des outils pratiques et des exercices concrets.",
+     },
+     {
+         name: "Louis Dufresne",
+         image: "https://media.licdn.com/dms/image/v2/D4E03AQFQi09ulfxs-w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670973495174?e=2147483647&v=beta&t=7_Y5QxXq9XmCNIkcbLct2AbjwtJdPT9CBR3AZcuX1VY",
+         profession: "Spécialiste en équipement de sécurité",
+         comment: "Grâce à cette formation, j’ai acquis une meilleure maîtrise des équipements de protection individuelle et appris à les utiliser dans les meilleures conditions.",
+     },
+     {
+         name: "Julie Durand",
+         image: "https://ceerrf.fr/wp-content/uploads/2022/10/julie-durand.webp",
+         profession: "Responsable de sécurité chantier",
+         comment: "La formation m'a permis de mieux comprendre les normes et de mettre en place des dispositifs de sécurité efficaces et adaptés pour mon équipe.",
+     }
+    ],
+    instructors2: [
+    {
+       name: "Pierre Dupont",
+       image: "https://ceritypartners.com/wp-content/uploads/2022/06/CERITY-LARGE_C-E_0007_83-Pierre-duPont_Pa.png",
+       role: "Formateur en prévention des risques liés au travail en hauteur",
+       numOfTrainings: 30
+    },
+    {
+       name: "Sophie Lefevre",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS35LnJHRaCMGf0E9RMxGCu_WNJvxeRmnwJ4Q&s",
+       role: "Consultante en sécurité et prévention des risques",
+       numOfTrainings: 25
+    }
+    ]
+    },
 {
 id: 1,
-image:
- "https://www.arbor-ag.ch/upload/shop/productimages/1024/Optimum%2081.jfif",
-title: "CACES R486 catégorie A et B",
-duration: "20H",
-instructors: "Jean-François Renucci",
-},
-{
-id: 2,
-image:
- "https://metafor-france.fr/wp-content/uploads/2024/09/Affiche-site-internet-16.png",
-title: "CACES R489 catégorie 1A, 3 et 5",
-duration: "24H",
-instructors: "Jean-François Renucci",
-},
-{
-id: 3,
-image: "https://www.kmc.tn/wp-content/uploads/2020/11/img2.jpg",
-title: "Echafaudage roulant",
-duration: "12H",
-instructors: "Jean-François Renucci",
-},
-{
-id: 4,
-image:
- "https://static.wixstatic.com/media/c0fc22_48c4bb2f0775498faaffff454ef15067~mv2.jpg/v1/fill/w_568,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c0fc22_48c4bb2f0775498faaffff454ef15067~mv2.jpg",
-title: "Montage démontage échafaudage fixe R408",
-duration: "18H",
-instructors: "Jean-François Renucci",
-},
-{
-id: 5,
-image:
- "https://btselectrotechniqueeiffelbdx.weebly.com/uploads/1/0/7/7/10775724/img-20170929-092303_orig.jpg",
-title: "Habilitations électriques B1V, B2V, BR, BC, BE, H1V, B2V, HE, HC",
-duration: "14H",
-instructors: "Jean-François Renucci",
-},
-{
-id: 6,
-image:
- "https://www.formadok.fr/wp-content/uploads/2024/02/developpement-durable-en-entreprise-1-1.png",
-title: "Mise en oeuvre du développement durable dans les TPE PME",
-duration: "30H",
-instructors: "Jean-François Renucci",
-},
-{
-id: 7,
-image:
- "https://thumbs.dreamstime.com/b/hommes-au-travail-sur-la-colonne-de-l-%C3%A9lectricit%C3%A9-en-uniforme-%C3%A9lectrique-170822598.jpg",
-title: "Travail en hauteur",
-duration: "8H",
-instructors: "Jean-François Renucci",
-},*/
-{
-id: 0,
-image: "https://sftl.fr/wp-content/uploads/2021/12/cat-B1-pelle-jcb-300x300.jpg",
-duration: "35 heures (5 jours).",
-title: "CACES R482 (Catégories A, B1 et F)",
-description: `
-Cette formation prépare les participants à conduire en toute sécurité les engins de chantier
-des catégories A (petits engins de chantier mobiles), B1 (engins d'extraction à déplacement
-séquentiel), et F (chariots de manutention tout-terrain). Elle permet également de maîtriser
-les réglementations et bonnes pratiques associées.
-`,
-ProchaineSession: "25/02",
-DPC: "93292325124",
-Duree: "35 heures (5 jours).",
-Financements: "DPC, FIF PL",
-
-objectives: [
- "Comprendre les règles de sécurité applicables à l’utilisation des engins de chantier.",
- "Acquérir les compétences nécessaires pour conduire des engins de manière sûre et efficace.",
- "Savoir effectuer les vérifications et l’entretien quotidien des engins.",
- "Obtenir la certification CACES R482 pour les catégories A, B1 et F."
-],
-
-publicCible: ["Conducteurs d’engins débutants ou expérimentés souhaitant obtenir ou renouveler leur certification.",
- "Professionnels du BTP devant utiliser des engins de chantier dans le cadre de leur activité."
-],
-prerequis: ["Avoir 18 ans minimum.",
- "Aptitude médicale à la conduite d'engins de chantier (certificat médical requis)."
-],
-
-skills: [
- "Maîtrise de la conduite d’engins de chantier – Savoir manœuvrer en toute sécurité les engins de catégories A (mini-engins), B1 (pelles hydrauliques) et F (chariots de chantier).",
- "Application des règles de sécurité – Connaître et respecter les normes de sécurité liées à l’utilisation des engins, la signalisation et la prévention des risques.",
- "Entretien et vérifications des engins – Effectuer les contrôles quotidiens, l’entretien courant et signaler les anomalies.",
- "Gestion de l’environnement de travail – Analyser les conditions de travail, identifier les dangers et adapter sa conduite aux différents types de terrains et charges.",
- "Lecture et interprétation des documents techniques – Comprendre les plans, schémas et consignes pour une utilisation efficace et sécurisée des engins."
-],
-
-programme: {
- id: "1",
- title: "Programme de Formation",
- parts: [
-   {
-     title: "Module 1 : Règlementation et responsabilités",
-     duration: "7 heures",
-     sections: [
-       "Principes fondamentaux de la sécurité sur les chantiers.",
-       "Responsabilités civiles et pénales du conducteur.",
-       "Réglementation liée au transport et à l’utilisation des engins."
-     ],
-   },
-   {
-     title: "Module 2 : Technologie des engins",
-     duration: "7 heures",
-     sections: [
-       "Présentation des engins de chantier : spécificités des catégories A, B1 et F.",
-       "Fonctionnement des différents organes des machines.",
-       "Points de vérification avant utilisation."
-     ],
-   },
-   {
-     title: "Module 3 :Conduite et manœuvres",
-     duration: "7 heures",
-     sections: [
-       "Techniques de conduite sur différents terrains.",
-       "Réalisation de manœuvres spécifiques (chargement, déchargement, empilement).",
-       "Gestion des situations difficiles (terrain instable, zones confinées)."
-     ],
-   },
-   {
-     title: "Module 4 : Entretien et maintenance",
-     duration: "7 heures",
-     sections: [
-       "Vérifications quotidiennes et entretien de premier niveau.",
-       "Détection des anomalies et procédures à suivre.",
-       "Consignes de stockage et maintenance préventive."
-     ],
-   },
-   {
-     title: "Module 5 : Évaluation et certification",
-     duration: "7 heures",
-     sections: [
-       "Épreuve théorique : QCM sur les règles de sécurité et réglementation.",
-       "Épreuve pratique : conduite sur circuit et réalisation des manœuvres.",
-       //"Consignes de stockage et maintenance préventive."
-     ],
-   },
- ],
-},
-
-instructors2 : [
- {
-   name: "Patrick Morel",
-   image: "https://patrick-morel.fr/wp-content/uploads/2020/09/IMAG1078a2046-3.jpg",
-   role: "Formateur spécialisé en conduite d'engins de chantier",
-   numOfTrainings: 20,
- },
- {
-   name: "Sophie Legrand",
-   image: "https://media.licdn.com/dms/image/v2/C4D03AQFUjv-OA9A_gg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1602234752036?e=2147483647&v=beta&t=9ARoqhNuCqA8AI_Y7SpYIBxGEn3KPNAG-XrcgNv0Ie0",
-   role: "Experte en sécurité et réglementation des engins de chantier",
-   numOfTrainings: 18,
- },
-],
-
-instructors: "Dr. Michel Cymes",
-
-equipePedagogique: [
- "Formateurs certifiés CACES avec une expérience dans le domaine des engins de chantier.",
- "Professionnels du BTP spécialisés dans la sécurité et la réglementation."
-],
-
-moyensPedagogiques: [
- "Supports pédagogiques interactifs (vidéos, manuels, fiches techniques).",
- "Mise en situation sur des engins conformes aux catégories A, B1, et F.",
- "Simulations et exercices pratiques sur terrain sécurisé."
-],
-
-dispositifEvaluation: [
- "Test théorique : QCM basé sur les règles de sécurité et la technologie des engins.",
- "Exercice pratique : Évaluation des compétences sur le terrain avec réalisation des manœuvres exigées."
-],
-
-certification: 
-"À l’issue de la formation, les participants recevront le CACES R482 pour les catégories A, B1 et F, attestant de leurs compétences et leur permettant de conduire les engins en toute légalité.",
-
-professionals : [
- {
-   name: "Marc Lefevre",
-   image: "https://www.cfnews.net/var/cfnews/storage/images/_aliases/slideshow/mediatheque/hd/standard-hd/people/marc-lefevre-ey-art-ppl-2019/1914636-7-fre-FR/Marc-Lefevre-EY-ART-PPL-2019.jpg",
-   profession: "Conducteur d'engins de chantier",
-   comment: "Cette formation m'a permis d'améliorer ma maîtrise des engins et de renforcer mes compétences en sécurité sur le terrain.",
- },
- {
-   name: "Sophie Martin",
-   image: "https://64.media.tumblr.com/36693238a5450071d59f208405f1a98a/tumblr_o48fobDaxX1r4dunbo1_1280.jpg",
-   profession: "Responsable sécurité en BTP",
-   comment: "Une formation très complète qui met l'accent sur la prévention des risques et la réglementation des engins de chantier.",
- },
- {
-   name: "David Moreau",
-   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Xu4JxOK6X6Rk3TJOfc7aDe6OoE6o2UsnmA&s",
-   profession: "Formateur en conduite d’engins",
-   comment: "J’ai apprécié la pédagogie et les exercices pratiques qui rendent la formation très interactive et efficace.",
- },
- {
-   name: "Isabelle Dubois",
-   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbYjRw8dcvKhgC9MeNA0TWs5_0YOwK1RpHyg&s",
-   profession: "Chef de chantier",
-   comment: "Un programme bien structuré qui permet d’acquérir les bonnes pratiques et de se perfectionner sur les différentes catégories d'engins.",
- },
-],
-
-
-
-},
-{
-id: 1,
-image: "https://www.cnfce.com/course/assets/5532dc5b-163e-4a4b-8348-f3d58f9c7aa9/img?cache=2024-12-31T17%3A48%3A05%2B00%3A00",
+image: "https://www.hauteur-prevention.com/wp-content/uploads/2024/03/formation-R408-1024x585.jpg",
 duration: "14 heures (2 jours).",
 title: "Montage et Démontage d’Échafaudages Fixes (R408)",
 description: `
@@ -3763,9 +3690,163 @@ professionals : [
    },
 ],
 },
+
+{
+  id: 4,
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQc5fwdu2RYWXpwkK9O0bPI6E4Pk3OL49QQg&s",
+  duration: "21 heures (3 jours)",
+  title: "RGE FEEBAT RENOVE",
+  description: `
+  Cette formation s’adresse aux professionnels du bâtiment souhaitant acquérir la qualification RGE (Reconnu Garant de l’Environnement) 
+  pour intervenir dans des projets de rénovation énergétique. Elle permet de comprendre les enjeux de la performance énergétique, 
+  d’acquérir des compétences techniques en rénovation, et de garantir le respect des réglementations en vigueur.
+  `,
+  ProchaineSession: "20/03",
+  DPC: "98765432100",
+  Duree: "21 heures (3 jours)",
+  Financements: "DPC, FIF PL",
+  
+  objectives: [
+   "Comprendre les principes de la rénovation énergétique et leur importance.",
+   "Maîtriser les techniques et matériaux nécessaires pour améliorer la performance énergétique des bâtiments.",
+   "Savoir réaliser des diagnostics et proposer des solutions adaptées aux besoins des clients.",
+   "Garantir le respect des normes et réglementations en vigueur.",
+   "Obtenir la qualification RGE, indispensable pour que vos clients bénéficient des aides financières à la rénovation énergétique."
+  ],
+  
+  publicCible: [
+   "Artisans et entreprises du bâtiment souhaitant obtenir la qualification RGE.",
+   "Professionnels spécialisés en rénovation énergétique.",
+   "Toute personne impliquée dans la rénovation de bâtiments résidentiels ou tertiaires."
+  ],
+  
+  prerequis: [
+   "Avoir des compétences de base en travaux de bâtiment."
+  ],
+  
+  skills: [
+   "Compréhension des enjeux énergétiques et financiers de la rénovation.",
+   "Maîtrise des techniques d’isolation et de rénovation énergétique.",
+   "Capacité à réaliser des diagnostics énergétiques et à proposer des solutions adaptées.",
+   "Connaissance des normes de rénovation et de la réglementation thermique."
+  ],
+  
+  programme: {
+   id: "3",
+   title: "Programme de Formation",
+   parts: [
+       {
+           title: "Module 1 : Contexte et enjeux de la rénovation énergétique",
+           duration: "4 heures",
+           sections: [
+               "Les objectifs de la transition énergétique.",
+               "Fonctionnement énergétique d’un bâtiment : bilan thermique, points faibles.",
+               "Enjeux financiers et environnementaux pour les propriétaires et les locataires."
+           ],
+       },
+       {
+           title: "Module 2 : Techniques et solutions de rénovation",
+           duration: "5 heures",
+           sections: [
+               "Isolation thermique des murs, toitures et sols.",
+               "Solutions de chauffage et de ventilation à haute efficacité énergétique.",
+               "Énergies renouvelables intégrées aux bâtiments.",
+               "Étanchéité à l’air et confort thermique."
+           ],
+       },
+       {
+           title: "Module 3 : Diagnostic et évaluation énergétique",
+           duration: "4 heures",
+           sections: [
+               "Réalisation d’un audit énergétique.",
+               "Interprétation des résultats et définition des priorités d’intervention.",
+               "Présentation des outils de diagnostic (caméra thermique, logiciels, etc.)."
+           ],
+       },
+       {
+           title: "Module 4 : Normes et réglementations",
+           duration: "4 heures",
+           sections: [
+               "Réglementation thermique (RT2012, RE2020).",
+               "Règles de mise en œuvre des matériaux et équipements.",
+               "Obligations pour obtenir la qualification RGE."
+           ],
+       },
+       {
+           title: "Module 5 : Études de cas pratiques",
+           duration: "4 heures",
+           sections: [
+               "Analyse de projets réels de rénovation énergétique.",
+               "Simulation de propositions techniques adaptées aux besoins d’un client.",
+               "Retours d’expérience et échanges sur les bonnes pratiques."
+           ],
+       },
+   ],
+  },
+  
+  equipePedagogique: [
+   "Formateurs spécialisés en rénovation énergétique et normes environnementales.",
+   "Experts en réglementation thermique et techniques innovantes.",
+   "Professionnels certifiés RGE avec une expérience terrain."
+  ],
+  
+  moyensPedagogiques: [
+   "Supports pédagogiques interactifs (guides, vidéos, études de cas).",
+   "Mise en situation pratique avec des outils et matériaux de rénovation.",
+   "Accès à des logiciels de simulation énergétique."
+  ],
+  
+  dispositifEvaluation: [
+   "Test théorique : QCM sur les principes de rénovation énergétique et les normes applicables.",
+   "Exercice pratique : Simulation d’un diagnostic et proposition d’un plan de rénovation énergétique."
+  ],
+  
+  certification: 
+  "Une attestation de formation RGE FEEBAT RENOVE sera délivrée, permettant aux participants de demander la qualification RGE auprès des organismes agréés et d’intervenir sur des projets éligibles aux aides publiques.",
+  instructors2: [
+  {
+     name: "Lucien Martin",
+     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO0cnMvtwMfThj9wUZ8wZuQyFvLFCt7g-ZZg&s",
+     role: "Formateur spécialisé en rénovation énergétique",
+     numOfTrainings: 22
+  },
+  {
+     name: "Camille Durand",
+     image: "https://www.decideurs-magazine.com/images/bacardi-9fevrier.png",
+     role: "Consultant en efficacité énergétique",
+     numOfTrainings: 15
+  }
+  ],
+  professionals: [
+   {
+       name: "Jean-Pierre Leclerc",
+       image: "https://lh5.googleusercontent.com/proxy/njF_B3VlPjL_oqkwYaXdaULWAl5j7PHIM4Vp9dN1xj8mNI64MF6Ttar89rmVmRH6vOajVaXNbcb1VJvavdsC3CUJbZY",
+       profession: "Entrepreneur en rénovation énergétique",
+       comment: "Cette formation m'a permis de mieux comprendre les enjeux de la transition énergétique et de maîtriser les techniques nécessaires pour réussir mes projets de rénovation.",
+   },
+   {
+       name: "Lucie Martin",
+       image: "https://d1198w4twoqz7i.cloudfront.net/wp-content/uploads/2020/04/13142608/Martin_L_18581_WB.jpg",
+       profession: "Consultante en performance énergétique",
+       comment: "La formation m’a donné les clés pour réaliser des audits énergétiques complets et proposer des solutions adaptées aux besoins spécifiques de mes clients.",
+   },
+   {
+       name: "David Hubert",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlHa1GnAC-NiqT5JzI2s0wxYprcTzbRNGQ2A&s",
+       profession: "Formateur en rénovation énergétique",
+       comment: "Grâce à cette formation, j'ai pu mettre à jour mes connaissances sur les nouvelles normes et les technologies innovantes pour la rénovation énergétique.",
+   },
+   {
+       name: "Anne-Sophie Dupuis",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMNG3SFm7dZ6169XfVyMPXx717VuxUVsj2_Q&s",
+       profession: "Responsable technique en rénovation",
+       comment: "Cette formation a renforcé ma capacité à gérer des projets de rénovation énergétique tout en respectant les normes strictes en matière d'efficacité énergétique.",
+   },
+  ],
+  },
 {
 id: 2,
-image: "https://app.ascopi.com/wp-content/uploads/2023/09/logo-h0b0-1.webp",
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ32oXYs7ZaP9V9Qlf-5OvnMK7cmA0Gd2HdQ&s",
 duration: "7 heures (1 jour).",
 title: "Habilitations Électriques B0/H0/H0V",
 description: `
@@ -3906,7 +3987,7 @@ professionals: [
 
 {
 id: 3,
-image: "https://www.crefops.com/src/assets/images/formations/formation-HABILITATION-ELECTRIQUE.jpg",
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPgTXau3VDbfGDdKb9TgAGz4lNYuYoKS6ekQ&s",
 duration: "28 heures (4 jours)",
 title: "Habilitation Électrique B1-B2-BR-BC-H1-H2",
 description: `
@@ -4047,307 +4128,169 @@ instructors2: [
 }
 ]
 },
+
+
+
+
 {
-id: 4,
-image: "https://www.artisandubatiment.fr/wp-content/uploads/2022/10/formation-feebat-tout-savoir.jpg",
-duration: "21 heures (3 jours)",
-title: "RGE FEEBAT RENOVE",
-description: `
-Cette formation s’adresse aux professionnels du bâtiment souhaitant acquérir la qualification RGE (Reconnu Garant de l’Environnement) 
-pour intervenir dans des projets de rénovation énergétique. Elle permet de comprendre les enjeux de la performance énergétique, 
-d’acquérir des compétences techniques en rénovation, et de garantir le respect des réglementations en vigueur.
-`,
-ProchaineSession: "20/03",
-DPC: "98765432100",
-Duree: "21 heures (3 jours)",
-Financements: "DPC, FIF PL",
-
-objectives: [
- "Comprendre les principes de la rénovation énergétique et leur importance.",
- "Maîtriser les techniques et matériaux nécessaires pour améliorer la performance énergétique des bâtiments.",
- "Savoir réaliser des diagnostics et proposer des solutions adaptées aux besoins des clients.",
- "Garantir le respect des normes et réglementations en vigueur.",
- "Obtenir la qualification RGE, indispensable pour que vos clients bénéficient des aides financières à la rénovation énergétique."
-],
-
-publicCible: [
- "Artisans et entreprises du bâtiment souhaitant obtenir la qualification RGE.",
- "Professionnels spécialisés en rénovation énergétique.",
- "Toute personne impliquée dans la rénovation de bâtiments résidentiels ou tertiaires."
-],
-
-prerequis: [
- "Avoir des compétences de base en travaux de bâtiment."
-],
-
-skills: [
- "Compréhension des enjeux énergétiques et financiers de la rénovation.",
- "Maîtrise des techniques d’isolation et de rénovation énergétique.",
- "Capacité à réaliser des diagnostics énergétiques et à proposer des solutions adaptées.",
- "Connaissance des normes de rénovation et de la réglementation thermique."
-],
-
-programme: {
- id: "3",
- title: "Programme de Formation",
- parts: [
+  id: 0,
+  image: "https://www.amg-formations.fr/assets/img/r482/r482-main.jpg",
+  duration: "35 heures (5 jours).",
+  title: "CACES R482 (Catégories A, B1 et F)",
+  description: `
+  Cette formation prépare les participants à conduire en toute sécurité les engins de chantier
+  des catégories A (petits engins de chantier mobiles), B1 (engins d'extraction à déplacement
+  séquentiel), et F (chariots de manutention tout-terrain). Elle permet également de maîtriser
+  les réglementations et bonnes pratiques associées.
+  `,
+  ProchaineSession: "25/02",
+  DPC: "93292325124",
+  Duree: "35 heures (5 jours).",
+  Financements: "DPC, FIF PL",
+  
+  objectives: [
+   "Comprendre les règles de sécurité applicables à l’utilisation des engins de chantier.",
+   "Acquérir les compétences nécessaires pour conduire des engins de manière sûre et efficace.",
+   "Savoir effectuer les vérifications et l’entretien quotidien des engins.",
+   "Obtenir la certification CACES R482 pour les catégories A, B1 et F."
+  ],
+  
+  publicCible: ["Conducteurs d’engins débutants ou expérimentés souhaitant obtenir ou renouveler leur certification.",
+   "Professionnels du BTP devant utiliser des engins de chantier dans le cadre de leur activité."
+  ],
+  prerequis: ["Avoir 18 ans minimum.",
+   "Aptitude médicale à la conduite d'engins de chantier (certificat médical requis)."
+  ],
+  
+  skills: [
+   "Maîtrise de la conduite d’engins de chantier – Savoir manœuvrer en toute sécurité les engins de catégories A (mini-engins), B1 (pelles hydrauliques) et F (chariots de chantier).",
+   "Application des règles de sécurité – Connaître et respecter les normes de sécurité liées à l’utilisation des engins, la signalisation et la prévention des risques.",
+   "Entretien et vérifications des engins – Effectuer les contrôles quotidiens, l’entretien courant et signaler les anomalies.",
+   "Gestion de l’environnement de travail – Analyser les conditions de travail, identifier les dangers et adapter sa conduite aux différents types de terrains et charges.",
+   "Lecture et interprétation des documents techniques – Comprendre les plans, schémas et consignes pour une utilisation efficace et sécurisée des engins."
+  ],
+  
+  programme: {
+   id: "1",
+   title: "Programme de Formation",
+   parts: [
      {
-         title: "Module 1 : Contexte et enjeux de la rénovation énergétique",
-         duration: "4 heures",
-         sections: [
-             "Les objectifs de la transition énergétique.",
-             "Fonctionnement énergétique d’un bâtiment : bilan thermique, points faibles.",
-             "Enjeux financiers et environnementaux pour les propriétaires et les locataires."
-         ],
+       title: "Module 1 : Règlementation et responsabilités",
+       duration: "7 heures",
+       sections: [
+         "Principes fondamentaux de la sécurité sur les chantiers.",
+         "Responsabilités civiles et pénales du conducteur.",
+         "Réglementation liée au transport et à l’utilisation des engins."
+       ],
      },
      {
-         title: "Module 2 : Techniques et solutions de rénovation",
-         duration: "5 heures",
-         sections: [
-             "Isolation thermique des murs, toitures et sols.",
-             "Solutions de chauffage et de ventilation à haute efficacité énergétique.",
-             "Énergies renouvelables intégrées aux bâtiments.",
-             "Étanchéité à l’air et confort thermique."
-         ],
+       title: "Module 2 : Technologie des engins",
+       duration: "7 heures",
+       sections: [
+         "Présentation des engins de chantier : spécificités des catégories A, B1 et F.",
+         "Fonctionnement des différents organes des machines.",
+         "Points de vérification avant utilisation."
+       ],
      },
      {
-         title: "Module 3 : Diagnostic et évaluation énergétique",
-         duration: "4 heures",
-         sections: [
-             "Réalisation d’un audit énergétique.",
-             "Interprétation des résultats et définition des priorités d’intervention.",
-             "Présentation des outils de diagnostic (caméra thermique, logiciels, etc.)."
-         ],
+       title: "Module 3 :Conduite et manœuvres",
+       duration: "7 heures",
+       sections: [
+         "Techniques de conduite sur différents terrains.",
+         "Réalisation de manœuvres spécifiques (chargement, déchargement, empilement).",
+         "Gestion des situations difficiles (terrain instable, zones confinées)."
+       ],
      },
      {
-         title: "Module 4 : Normes et réglementations",
-         duration: "4 heures",
-         sections: [
-             "Réglementation thermique (RT2012, RE2020).",
-             "Règles de mise en œuvre des matériaux et équipements.",
-             "Obligations pour obtenir la qualification RGE."
-         ],
+       title: "Module 4 : Entretien et maintenance",
+       duration: "7 heures",
+       sections: [
+         "Vérifications quotidiennes et entretien de premier niveau.",
+         "Détection des anomalies et procédures à suivre.",
+         "Consignes de stockage et maintenance préventive."
+       ],
      },
      {
-         title: "Module 5 : Études de cas pratiques",
-         duration: "4 heures",
-         sections: [
-             "Analyse de projets réels de rénovation énergétique.",
-             "Simulation de propositions techniques adaptées aux besoins d’un client.",
-             "Retours d’expérience et échanges sur les bonnes pratiques."
-         ],
+       title: "Module 5 : Évaluation et certification",
+       duration: "7 heures",
+       sections: [
+         "Épreuve théorique : QCM sur les règles de sécurité et réglementation.",
+         "Épreuve pratique : conduite sur circuit et réalisation des manœuvres.",
+         //"Consignes de stockage et maintenance préventive."
+       ],
      },
- ],
-},
-
-equipePedagogique: [
- "Formateurs spécialisés en rénovation énergétique et normes environnementales.",
- "Experts en réglementation thermique et techniques innovantes.",
- "Professionnels certifiés RGE avec une expérience terrain."
-],
-
-moyensPedagogiques: [
- "Supports pédagogiques interactifs (guides, vidéos, études de cas).",
- "Mise en situation pratique avec des outils et matériaux de rénovation.",
- "Accès à des logiciels de simulation énergétique."
-],
-
-dispositifEvaluation: [
- "Test théorique : QCM sur les principes de rénovation énergétique et les normes applicables.",
- "Exercice pratique : Simulation d’un diagnostic et proposition d’un plan de rénovation énergétique."
-],
-
-certification: 
-"Une attestation de formation RGE FEEBAT RENOVE sera délivrée, permettant aux participants de demander la qualification RGE auprès des organismes agréés et d’intervenir sur des projets éligibles aux aides publiques.",
-instructors2: [
-{
-   name: "Lucien Martin",
-   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO0cnMvtwMfThj9wUZ8wZuQyFvLFCt7g-ZZg&s",
-   role: "Formateur spécialisé en rénovation énergétique",
-   numOfTrainings: 22
-},
-{
-   name: "Camille Durand",
-   image: "https://www.decideurs-magazine.com/images/bacardi-9fevrier.png",
-   role: "Consultant en efficacité énergétique",
-   numOfTrainings: 15
-}
-],
-professionals: [
- {
-     name: "Jean-Pierre Leclerc",
-     image: "https://lh5.googleusercontent.com/proxy/njF_B3VlPjL_oqkwYaXdaULWAl5j7PHIM4Vp9dN1xj8mNI64MF6Ttar89rmVmRH6vOajVaXNbcb1VJvavdsC3CUJbZY",
-     profession: "Entrepreneur en rénovation énergétique",
-     comment: "Cette formation m'a permis de mieux comprendre les enjeux de la transition énergétique et de maîtriser les techniques nécessaires pour réussir mes projets de rénovation.",
- },
- {
-     name: "Lucie Martin",
-     image: "https://d1198w4twoqz7i.cloudfront.net/wp-content/uploads/2020/04/13142608/Martin_L_18581_WB.jpg",
-     profession: "Consultante en performance énergétique",
-     comment: "La formation m’a donné les clés pour réaliser des audits énergétiques complets et proposer des solutions adaptées aux besoins spécifiques de mes clients.",
- },
- {
-     name: "David Hubert",
-     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlHa1GnAC-NiqT5JzI2s0wxYprcTzbRNGQ2A&s",
-     profession: "Formateur en rénovation énergétique",
-     comment: "Grâce à cette formation, j'ai pu mettre à jour mes connaissances sur les nouvelles normes et les technologies innovantes pour la rénovation énergétique.",
- },
- {
-     name: "Anne-Sophie Dupuis",
-     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMNG3SFm7dZ6169XfVyMPXx717VuxUVsj2_Q&s",
-     profession: "Responsable technique en rénovation",
-     comment: "Cette formation a renforcé ma capacité à gérer des projets de rénovation énergétique tout en respectant les normes strictes en matière d'efficacité énergétique.",
- },
-],
-},
-{
-id: 5,
-image: "https://www.haladjian-industrial.fr/wp-content/uploads/2019/03/antichute-construction.jpg",
-duration: "14 heures (2 jours)",
-title: "Travail en Hauteur et Prévention des Risques",
-description: `
-Cette formation s’adresse aux professionnels du bâtiment exposés aux risques de chute dans le cadre de travaux en hauteur. 
-Elle fournit les connaissances et compétences nécessaires pour travailler en sécurité, tout en respectant la réglementation en vigueur.
-`,
-ProchaineSession: "15/04",
-DPC: "11223344556",
-Duree: "14 heures (2 jours)",
-Financements: "DPC, OPCO",
-
-objectives: [
- "Comprendre les risques liés au travail en hauteur et les prévenir efficacement.",
- "Maîtriser l’utilisation des équipements de protection individuelle (EPI).",
- "Savoir mettre en place des dispositifs de sécurité adaptés au chantier.",
- "Identifier les responsabilités légales liées au travail en hauteur."
-],
-
-publicCible: [
- "Travailleurs du BTP réalisant des interventions en hauteur.",
- "Chefs de chantier et superviseurs responsables de la sécurité des équipes."
-],
-
-prerequis: [
- "Être apte médicalement au travail en hauteur."
-],
-
-skills: [
- "Identification des risques liés aux travaux en hauteur.",
- "Maîtrise des équipements de protection individuelle (EPI).",
- "Compétences en mise en œuvre des dispositifs de sécurité sur le chantier.",
- "Connaissance des obligations légales et responsabilités liées au travail en hauteur."
-],
-
-programme: {
- id: "4",
- title: "Programme de Formation",
- parts: [
-     {
-         title: "Module 1 : Réglementation et responsabilités",
-         duration: "3 heures",
-         sections: [
-             "Les obligations légales du salarié et de l’employeur.",
-             "La réglementation applicable (Code du travail, normes européennes)."
-         ]
-     },
-     {
-         title: "Module 2 : Analyse des risques et prévention",
-         duration: "3 heures",
-         sections: [
-             "Identifier les situations à risque.",
-             "Comprendre les causes des chutes et adopter les bonnes pratiques."
-         ]
-     },
-     {
-         title: "Module 3 : Utilisation des équipements de protection individuelle (EPI)",
-         duration: "3 heures",
-         sections: [
-             "Présentation des différents types d’EPI (harnais, longes, points d’ancrage).",
-             "Techniques de vérification, ajustement et entretien des équipements."
-         ]
-     },
-     {
-         title: "Module 4 : Mise en œuvre des dispositifs de sécurité",
-         duration: "3 heures",
-         sections: [
-             "Installation des lignes de vie.",
-             "Techniques de travail sécurisées (échafaudages, nacelles, cordes).",
-             "Plan de sauvetage et conduite à tenir en cas d’incident."
-         ]
-     },
-     {
-         title: "Module 5 : Mise en situation pratique",
-         duration: "2 heures",
-         sections: [
-             "Exercices sur site sécurisé pour tester les compétences.",
-             "Simulations d’intervention en hauteur avec équipement complet."
-         ]
-     }
- ]
-},
-
-equipePedagogique: [
- "Experts en prévention des risques professionnels.",
- "Formateurs spécialisés dans les travaux en hauteur et l’utilisation des EPI."
-],
-
-moyensPedagogiques: [
- "Équipements conformes aux normes en vigueur (harnais, nacelles, échafaudages).",
- "Supports pédagogiques multimédias.",
- "Mises en situation sur des sites sécurisés."
-],
-
-dispositifEvaluation: [
- "QCM : Validation des connaissances théoriques (minimum 70% de bonnes réponses).",
- "Exercice pratique : Installation d’un dispositif de sécurité et réalisation de travaux en hauteur simulés."
-],
-
-certification: 
-"Une attestation de compétence sera remise, validant les capacités des participants à intervenir en hauteur en toute sécurité.",
-
-professionals: [
- {
-     name: "Michel Lemoine",
-     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHjPVegSEn22Lgdqv9UffwjeIb0WBG1eSoUQ&s",
-     profession: "Chef de chantier en sécurité",
-     comment: "La formation m’a permis d’approfondir mes connaissances des risques liés au travail en hauteur et de mieux préparer mes équipes pour travailler en toute sécurité.",
- },
- {
-     name: "Sophie Bernard",
-     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf7SPZtXwHUKCL-7od21oyOzHCOZCLSIsDVQ&s",
-     profession: "Formatrice en prévention des risques",
-     comment: "Cette formation est essentielle pour garantir la sécurité des travailleurs en hauteur, avec des outils pratiques et des exercices concrets.",
- },
- {
-     name: "Louis Dufresne",
-     image: "https://media.licdn.com/dms/image/v2/D4E03AQFQi09ulfxs-w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670973495174?e=2147483647&v=beta&t=7_Y5QxXq9XmCNIkcbLct2AbjwtJdPT9CBR3AZcuX1VY",
-     profession: "Spécialiste en équipement de sécurité",
-     comment: "Grâce à cette formation, j’ai acquis une meilleure maîtrise des équipements de protection individuelle et appris à les utiliser dans les meilleures conditions.",
- },
- {
-     name: "Julie Durand",
-     image: "https://ceerrf.fr/wp-content/uploads/2022/10/julie-durand.webp",
-     profession: "Responsable de sécurité chantier",
-     comment: "La formation m'a permis de mieux comprendre les normes et de mettre en place des dispositifs de sécurité efficaces et adaptés pour mon équipe.",
- }
-],
-instructors2: [
-{
-   name: "Pierre Dupont",
-   image: "https://ceritypartners.com/wp-content/uploads/2022/06/CERITY-LARGE_C-E_0007_83-Pierre-duPont_Pa.png",
-   role: "Formateur en prévention des risques liés au travail en hauteur",
-   numOfTrainings: 30
-},
-{
-   name: "Sophie Lefevre",
-   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS35LnJHRaCMGf0E9RMxGCu_WNJvxeRmnwJ4Q&s",
-   role: "Consultante en sécurité et prévention des risques",
-   numOfTrainings: 25
-}
-]
-},
+   ],
+  },
+  
+  instructors2 : [
+   {
+     name: "Patrick Morel",
+     image: "https://patrick-morel.fr/wp-content/uploads/2020/09/IMAG1078a2046-3.jpg",
+     role: "Formateur spécialisé en conduite d'engins de chantier",
+     numOfTrainings: 20,
+   },
+   {
+     name: "Sophie Legrand",
+     image: "https://media.licdn.com/dms/image/v2/C4D03AQFUjv-OA9A_gg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1602234752036?e=2147483647&v=beta&t=9ARoqhNuCqA8AI_Y7SpYIBxGEn3KPNAG-XrcgNv0Ie0",
+     role: "Experte en sécurité et réglementation des engins de chantier",
+     numOfTrainings: 18,
+   },
+  ],
+  
+  instructors: "Dr. Michel Cymes",
+  
+  equipePedagogique: [
+   "Formateurs certifiés CACES avec une expérience dans le domaine des engins de chantier.",
+   "Professionnels du BTP spécialisés dans la sécurité et la réglementation."
+  ],
+  
+  moyensPedagogiques: [
+   "Supports pédagogiques interactifs (vidéos, manuels, fiches techniques).",
+   "Mise en situation sur des engins conformes aux catégories A, B1, et F.",
+   "Simulations et exercices pratiques sur terrain sécurisé."
+  ],
+  
+  dispositifEvaluation: [
+   "Test théorique : QCM basé sur les règles de sécurité et la technologie des engins.",
+   "Exercice pratique : Évaluation des compétences sur le terrain avec réalisation des manœuvres exigées."
+  ],
+  
+  certification: 
+  "À l’issue de la formation, les participants recevront le CACES R482 pour les catégories A, B1 et F, attestant de leurs compétences et leur permettant de conduire les engins en toute légalité.",
+  
+  professionals : [
+   {
+     name: "Marc Lefevre",
+     image: "https://www.cfnews.net/var/cfnews/storage/images/_aliases/slideshow/mediatheque/hd/standard-hd/people/marc-lefevre-ey-art-ppl-2019/1914636-7-fre-FR/Marc-Lefevre-EY-ART-PPL-2019.jpg",
+     profession: "Conducteur d'engins de chantier",
+     comment: "Cette formation m'a permis d'améliorer ma maîtrise des engins et de renforcer mes compétences en sécurité sur le terrain.",
+   },
+   {
+     name: "Sophie Martin",
+     image: "https://64.media.tumblr.com/36693238a5450071d59f208405f1a98a/tumblr_o48fobDaxX1r4dunbo1_1280.jpg",
+     profession: "Responsable sécurité en BTP",
+     comment: "Une formation très complète qui met l'accent sur la prévention des risques et la réglementation des engins de chantier.",
+   },
+   {
+     name: "David Moreau",
+     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Xu4JxOK6X6Rk3TJOfc7aDe6OoE6o2UsnmA&s",
+     profession: "Formateur en conduite d’engins",
+     comment: "J’ai apprécié la pédagogie et les exercices pratiques qui rendent la formation très interactive et efficace.",
+   },
+   {
+     name: "Isabelle Dubois",
+     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbYjRw8dcvKhgC9MeNA0TWs5_0YOwK1RpHyg&s",
+     profession: "Chef de chantier",
+     comment: "Un programme bien structuré qui permet d’acquérir les bonnes pratiques et de se perfectionner sur les différentes catégories d'engins.",
+   },
+  ],
+  
+  
+  
+  },
 {
 id: 6,
-image: "https://www.cmesmat.fr/media/wysiwyg/Les_quipements_de_s_curit_pour_les_travaux_de_d_molition.jpg",
+image: "https://www.btp-werey.fr/data/uploads/2023/09/demolition_complete_2.jpg",
 duration: "21 heures (3 jours)",
 title: "Gestion et Sécurité des Travaux de Démolition",
 description: `
@@ -4506,7 +4449,7 @@ instructors2: [
 },
 {
 id: 7,
-image: "https://itbsformation.com/wp-content/uploads/2021/10/CACES-R486.jpg",
+image: "https://www.placedeschantiers.fr/wp-content/uploads/2023/07/prix-location-nacelle.jpeg",
 duration: "21 heures (3 jours)",
 title: "CACES R486 - Conduite de Nacelles Élévatrices (PEMP)",
 description: `
@@ -4648,7 +4591,7 @@ instructors2: [
 },
 {
 id: 8,
-image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47bqqX7LKVQL7-nMj7Jm3TuSI-n8yHz21_w&s",
+image: "https://www.protegeralertersecourir.fr/medias/images/sst.png",
 duration: "14 heures (2 jours)",
 title: "Sauveteur Secouriste du Travail (SST)",
 description: `
@@ -4783,7 +4726,7 @@ instructors2: [
 /**On s'arrête ici la modification koko ***/
 {
 id: 9,
-image: "https://img.leboncoin.fr/api/v1/lbcpb1/images/9c/65/fa/9c65faecbaf2c12381839e21ee0d4a2113df1d43.jpg?rule=ad-small",
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamEEQ52x2lXJzGLD8QP_FMAOtCW-U0JvubQOho9aNHSY9BlUGNTjWitZMzrQMYxeSIdU&usqp=CAU",
 duration: "14 heures (2 jours)",
 title: "Montage et Utilisation d’Échafaudages Roulants",
 description: `
