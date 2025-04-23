@@ -1,54 +1,86 @@
 import React from "react";
-import img1 from "../../../../public/images/mission2.jpg";
+import img1 from "../../../../public/images/mission.jpg";
 import { FaGraduationCap, FaGlobe, FaUserCheck } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const OurMission = () => {
-  return (
-    <section className="flex items-center justify-center px-6 md:px-16 max-w-6xl mx-auto py-16 bg-white">
-      <div className="flex flex-col md:flex-row items-center gap-12">
-        <motion.div
-          className="flex flex-col gap-6 md:w-1/2 text-center md:text-left"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl font-bold text-primary">Notre mission</h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-          Nous révolutionnons l'accès à la formation pour les professionnels du bâtiment en proposant des solutions d’apprentissage en ligne innovantes, flexibles et adaptées à leurs besoins spécifiques.          </p>
-          <hr className="border-gray-300" />
-          <h3 className="text-xl font-semibold text-gray-700">Notre engagement</h3>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3">
-              <FaGraduationCap className="text-3xl text-blue-500" />
-              <span className="text-lg font-medium">Offrir des parcours pédagogiques de qualité</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaGlobe className="text-3xl text-green-500" />
-              <span className="text-lg font-medium">Accessibles partout et à tout moment</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaUserCheck className="text-3xl text-purple-500 ml-2" />
-              <span className="text-lg font-medium">Accompagnement pour chaque professionnel dans son évolution et sa réussite</span>
-            </div>
-          </div>
-        </motion.div>
+const items = [
+  {
+    icon: <FaGraduationCap className="text-white text-xl" />,
+    title: "Qualité pédagogique",
+    description: "Des parcours certifiants, conçus par des experts du bâtiment.",
+    color: "bg-orange-500",
+  },
+  {
+    icon: <FaGlobe className="text-white text-xl" />,
+    title: "Accessibilité totale",
+    description: "Une plateforme disponible 24h/24, partout en France.",
+    color: "bg-orange-500",
+  },
+  {
+    icon: <FaUserCheck className="text-white text-xl" />,
+    title: "Accompagnement humain",
+    description: "Des formateurs disponibles pour vous guider à chaque étape.",
+    color: "bg-orange-500",
+  },
+];
 
+export default function OurMission() {
+  return (
+    <section className="bg-gradient-to-br from-blue-50 to-white py-24 px-52">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+        {/* Timeline */}
+        <div className="space-y-10">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-extrabold text-orange-500"
+          >
+             Notre mission
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-gray-700 text-lg"
+          >
+            Nous construisons un avenir plus formé pour les professionnels du bâtiment à travers une pédagogie novatrice, accessible, et profondément humaine.
+          </motion.p>
+
+          <div className="relative  pl-6 space-y-10 mt-10">
+            {items.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.3 }}
+                className="relative"
+              >
+                <div className={`absolute -left-14 top-1.5 w-10 h-10 flex items-center justify-center rounded-full shadow-lg  ${item.color}`}>
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Image */}
         <motion.div
-          className="md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="w-full flex justify-center"
         >
           <img
             src={img1}
-            alt="Notre mission"
-            className="rounded-lg shadow-lg object-cover w-full max-w-md"
+            alt="BTP"
+            className="rounded-3xl shadow-2xl w-full max-w-md object-cover"
           />
         </motion.div>
       </div>
     </section>
   );
-};
-
-export default OurMission;
+}
