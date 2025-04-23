@@ -19,7 +19,7 @@ const Home = () => {
     <section className="flex flex-col">
       <Slider />
       <MostSeenTrainingsBtp
-        title="Nos formations essentielles pour les professionnels du bâtiment !"
+        title="Nos formations incontournables pour les experts du bâtiment !"
         description="Explorez notre sélection de formations clés pour développer vos compétences techniques et mener à bien vos projets dans le secteur de la construction."
         trainings={btpTrainings}
       />
