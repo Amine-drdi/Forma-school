@@ -52,10 +52,10 @@ const Timeline = () => {
     <section className="bg-white py-20 px-6 sm:px-10">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800">
-          Comment démarrer avec nous ?
+        Prêt à vous lancer ? 
         </h2>
         <p className="mt-4 text-gray-600 text-base md:text-lg leading-relaxed">
-          De l’inscription au financement, chaque étape est pensée pour vous simplifier la vie.
+        Inscription, constitution de votre dossier, aide au financement : chaque étape est intuitive et guidée.
         </p>
       </div>
 

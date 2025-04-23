@@ -28,8 +28,8 @@ const Home = () => {
 
      
       <Advisors
-        label="Profitez de l’expertise de professionnels aguerris"
-        description="Ils sont au cœur des grandes réalisations du secteur et partagent leur vision pour inspirer et guider ceux qui bâtissent le monde de demain. Découvrez les témoignages de trois figures clés de la construction et de l'architecture."
+        label="Bénéficiez de l’expertise de professionnels chevronnés"
+        description="Acteurs majeurs des grandes réalisations du secteur, ils partagent leur vision pour inspirer et accompagner ceux qui façonnent le monde de demain"
         advisorsList={btpAdvisors}
       />
  

@@ -6,11 +6,10 @@ const WhyChooseUs = () => {
     <section className="w-full bg-gradient-to-b from-[#fef3e8] via-white to-[#fef3e8] py-20 px-6 sm:px-12">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-          Pourquoi Choisir Notre Plateforme ?
+          Pourquoi Nous ?
         </h2>
         <p className="mt-4 text-gray-700 text-base md:text-lg">
-          Nous mettons tout en œuvre pour vous offrir une expérience d'apprentissage unique : flexibilité, expertise et accompagnement.
-        </p>
+        Notre engagement ? Vous offrir bien plus qu’une formation : une expérience d’apprentissage innovante, alliant flexibilité, excellence pédagogique et un accompagnement constant pour vous mener vers la réussite.        </p>
       </div>
 
       <div className="mt-16 space-y-8">
