@@ -5,11 +5,9 @@ const AllTrainings = ({btpTrainings}) => {
   return (
     <div className="flex flex-col gap-10 w-full">
       <div className="">
-        <p className="font-medium md:text-xl text-base text-left">
-          Toutes les formations
-        </p>
-        <p className="font-normal md:text-base text-sm text-left text-gray-500">
-          Accédez à des formations certifiantes, 100% en ligne et financées par
+
+        <p className="font-normal md:text-base text-sm text-center text-gray-500">
+          Accédez à des formations certifiantes et financées par
           les dispositifs incontournables, dont le DPC.
         </p>
       </div>

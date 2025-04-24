@@ -3,7 +3,7 @@ import Card from "../../../components/CardBtp";
 
 const TrainingList = ({ btpTrainings }) => {
   return (
-    <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
+    <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 px-40">
    
       {btpTrainings.map((training) => (
         <Card

@@ -4,6 +4,10 @@ import { MdOutlineAccountCircle, MdMenu } from "react-icons/md";
 import { HiChevronDown } from "react-icons/hi";
 import { useAppContext } from "../app/context/AppContext";
 import { btpCategories } from "../assets/data/categories";
+import { LiaPhoneVolumeSolid } from "react-icons/lia";
+import { MdOutlineMail } from "react-icons/md";
+
+
 
 const Header = () => {
   const { activeMenu, setActiveMenu } = useAppContext();
@@ -27,6 +31,22 @@ const Header = () => {
   }, []);
 
   return (
+
+    <>
+   {/* Barre de contact à droite */}
+<div className="hidden lg:flex justify-end items-center gap-10 px-4 md:px-8 lg:px-16 py-2  text-sm text-gray-700">
+  <div className="flex items-center gap-2">
+    <LiaPhoneVolumeSolid className="text-primary w-6 h-6" />
+    <span className="font-medium">07 56 82 86 00</span>
+  </div>
+  <div className="flex items-center gap-2">
+    <MdOutlineMail className="text-primary w-6 h-6" />
+    <span className="font-medium">contact@forma-school.fr</span>
+  </div>
+</div>
+
+
+    {/* Barre principale */}
     <header className="sticky top-0 z-50 w-full bg-white shadow-md px-4 md:px-8 lg:px-16 h-16 flex items-center justify-between">
       {/* Logo + Burger */}
       <div className="flex items-center gap-4">
@@ -116,6 +136,7 @@ const Header = () => {
         <NavLink to="/contact" className="text-gray-700 hover:text-primary">Contact</NavLink>
       </nav>
     </header>
+    </>
   );
 };
 

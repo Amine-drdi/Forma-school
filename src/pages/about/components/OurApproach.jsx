@@ -1,55 +1,63 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const items = [
+  {
+    title: "Accessibilité",
+    text: "Formations en ligne et en présentiel accessibles partout en France.",
+  },
+  {
+    title: "Qualité",
+    text: "Contenus réalisés par des experts du BTP, conformes aux exigences du marché.",
+  },
+  {
+    title: "Innovation",
+    text: "Simulateurs, vidéos 3D et outils immersifs pour un apprentissage moderne.",
+  },
+  {
+    title: "Accompagnement",
+    text: "Suivi personnalisé pour une montée en compétences garantie.",
+  },
+];
 
 const OurApproach = () => {
   return (
-    <div className="relative w-full h-full min-h-[400px] py-8 sm:py-16">
-      {/* Overlay */}
-      <div className="absolute top-0 left-0 z-10 w-full h-full bg-black/10" />
+    <section className="relative bg-gray-900 text-white py-20 px-6 sm:px-12 overflow-hidden">
+      {/* Image de fond stylisée */}
+      <img
+        src="/images/approche2.jpg"
+        alt="Notre approche"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
+      />
+      <div className="absolute inset-0 bg-black/10" />
 
-      {/* Image de fond RESPONSIVE */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <img
-          src="/images/approche3.jpg"
-          alt="Notre approche"
-          className="w-full h-[750px] sm:h-[400px] lg:h-[500px] object-cover"
-        />
-      </div>
+      {/* Contenu principal */}
+      <div className="relative z-10 max-w-7xl mx-auto text-center space-y-14">
+        <motion.h2
+          className="text-4xl sm:text-5xl font-bold"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Notre approche
+        </motion.h2>
 
-      {/* Contenu */}
-      <div className="relative z-20 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col gap-8 sm:gap-16 text-white text-center">
-        <p className="text-2xl sm:text-3xl font-bold">Notre approche</p>
-
-        {/* Grid Responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center">
-          {[
-            {
-              title: "Accessibilité",
-              text: "Formations disponibles en ligne et en présentiel, pour les professionnels du bâtiment partout en France.",
-            },
-            {
-              title: "Qualité",
-              text: "Contenus conçus par des experts du secteur BTP pour répondre aux exigences actuelles du marché.",
-            },
-            {
-              title: "Innovation",
-              text: "Utilisation de simulateurs, vidéos 3D et outils interactifs pour un apprentissage immersif.",
-            },
-            {
-              title: "Accompagnement",
-              text: "Suivi pédagogique personnalisé pour garantir la montée en compétence des apprenants.",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="p-4 flex flex-col gap-2 text-center w-full max-w-[300px] mx-auto h-full border border-white rounded-lg bg-white/10 backdrop-blur-md"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {items.map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-md"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.2 }}
             >
-              <p className="text-lg sm:text-xl font-semibold">{item.title}</p>
-              <p className="text-sm sm:text-base">{item.text}</p>
-            </div>
+              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+              <p className="text-sm text-gray-200">{item.text}</p>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

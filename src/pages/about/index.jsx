@@ -11,10 +11,10 @@ const About = () => {
     <div>
       <Hero />
       <OurStory /> 
-      <OurMission />
       <OurImpact />
+      <OurMission />
       <OurApproach />
-      <Founder/>
+      {/*<Founder/>*/}
     </div>
   );
 };

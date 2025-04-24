@@ -4,50 +4,36 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="relative w-full bg-gradient-to-l   to-main_color md:px-desktop_padding sm:px-tablet_padding px-mobile_padding py-16">
-      <div className="w-full grid md:grid-cols-2 grid-cols-1">
-        <div className="max-w-xl flex flex-col gap-10 py-16">
-          <p className="text-3xl font-bold text-gray-700">Découvrez Forma school</p>
-          <p className="text-xl font-medium text-gray-900">
-            Parcourez les options disponibles et trouvez celle qui correspond
-            parfaitement à vos attentes.
+    <section className="w-full bg-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        {/* Texte */}
+        <div className="flex flex-col gap-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700">
+            Découvrez Forma school
+          </h1>
+          <p className="text-lg sm:text-xl font-medium text-gray-900">
+            Parcourez les options disponibles et trouvez celle qui correspond parfaitement à vos attentes.
           </p>
-          <div className="flex xl:flex-row flex-col gap-6">
+          <div className="flex flex-col sm:flex-row gap-4">
             <NavLink
-              to="/contact"
-              className="bg-primary px-6 py-3 rounded-full text-white hover:text-primary hover:bg-secondary border border-transparent hover:border-primary w-fit transition-all duration-500 ease-in-out"
+              to="/formations/categorie/btp"
+              className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-secondary hover:text-primary border border-transparent hover:border-primary transition-all duration-500 ease-in-out w-fit"
             >
-              Demander une information
+              Découvrez nos formations
             </NavLink>
-
-            <NavLink
-              to="/AllTrainings"
-              className="bg-secondary px-6 py-3 rounded-full text-primary hover:text-secondary hover:bg-primary border border-primary hover:border-secondary w-fit transition-all duration-500 ease-in-out"
-            >
-              Decouvrez nos formations
-            </NavLink>
-
           </div>
         </div>
-        <div className="relative max-md:hidden">
-          <div className="absolute 2xl:right-[calc(50%-250px)] xl:right-[calc(50%-300px)] right-[5%] top-[-10%]">
-            <img
-              src="/images/about-3.jpg"
-              alt="about hero"
-              className="2xl:w-80 w-64 h-auto object-cover rounded-lg shadow-lg"
-            />
-          </div>
-         <div className="absolute 2xl:left-0  xl:left-[calc(50%-256px)] left-[15%] top-[30%]">
-            <img
-              src="/images/btp.jpg"
-              alt="about hero"
-              className="w-auto 2xl:h-72 h-56 object-cover rounded-lg shadow-lg"
-            />
-          </div>
 
+        {/* Image */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src="/images/ouvrier.png"
+            alt="Ouvrier"
+            className="w-full max-w-md object-contain"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

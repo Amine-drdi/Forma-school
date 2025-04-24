@@ -3,9 +3,25 @@ import AllTrainings from "./components/AllTrainings";
 import { useLocation } from "react-router-dom";
 import { btpTrainings } from "../../assets/data/trainings";
 
+import { AnimatePresence, motion } from "framer-motion";
+
+
+const formations = ["CACES R482", "CACES R486", "CACES R489", "Habilitations électrique" , "Utilisation d’Échafaudages" , "RGE FEEBAT RENOVE"];
+
 const HealthAndConstructionTrainings = () => {
   const location = useLocation();
   const [trainingsList, setTrainingsList] = useState([]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % formations.length);
+    }, 4000); // toutes les 2.5 secondes
+
+    return () => clearInterval(interval);
+  }, []);
+
+
 
   useEffect(() => {
     const trainingMapping = {
@@ -30,11 +46,28 @@ const HealthAndConstructionTrainings = () => {
   };
 
   return (
-    <div className="w-full bg-white py-16 flex flex-col gap-14 px-4 md:px-10 lg:px-20">
-      <div className="flex flex-col gap-6  p-2  max-w-5xl mx-auto">
-        <p className="font-bold text-2xl text-black text-left">{title}</p>
-        <p className="text-gray-700 text-base md:text-lg text-left">{description}</p>
+    <div>
+        <div className="flex flex-col items-center justify-center h-96 bg-gradient-to-b from-[#e08e3c] via-yellow-200 to-[#eebd8c] text-white text-center px-4 ">
+      <h1 className="text-3xl md:text-5xl font-bold mb-10">
+        Nos Formations pour les professionnels du BTP
+      </h1>
+
+      <div className="relative h-20 flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.6 }}
+            className="absolute text-2xl md:text-4xl font-semibold"
+          >
+            {formations[index]}
+          </motion.div>
+        </AnimatePresence>
       </div>
+    </div>
+
 
       <div className="mt-10">
         <AllTrainings btpTrainings={trainingsList} />
