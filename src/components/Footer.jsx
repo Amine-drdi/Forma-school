@@ -71,9 +71,9 @@ const Footer = () => {
               className="w-full h-32 rounded-md shadow-md"
               frameBorder="0"
               scrolling="no"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.5915744864317!2d2.331891076573113!3d48.86605170033998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e35bb69eb65%3A0x15e8ab32bb8b1b57!2s229%20Rue%20Saint-Honor%C3%A9%2C%2075001%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1708445158767!5m2!1sen!2sfr"
-              allowFullScreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2206.7895908622468!2d2.3031646637339835!3d48.87098756231883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc3f24fffff%3A0x18fd90f3c3e69e0c!2s128%20Rue%20La%20Bo%C3%A9tie%20imm%20d%2C%2075008%20Paris%2C%20France!5e0!3m2!1sfr!2stn!4v1749567055788!5m2!1sfr!2stn"              allowFullScreen
             ></iframe>
+           
           </div>
         </div>
 

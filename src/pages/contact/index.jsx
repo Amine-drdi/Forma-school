@@ -8,15 +8,13 @@ const Contact = () => {
   return (
     <div className="flex flex-col items-center bg-gray-50">
       {/* Hero Section avec image de fond et overlay */}
-      <div className="w-full relative h-96">
-        <div className="absolute inset-0 bg-black/50 z-10 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white">Nous contacter</h1>
-        </div>
-        <img
-          src={contactImage}
-          alt="Contactez-nous"
-          className="object-cover w-full h-full"
-        />
+      <div className="w-full relative h-96 ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2206.7895908622468!2d2.3031646637339835!3d48.87098756231883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc3f24fffff%3A0x18fd90f3c3e69e0c!2s128%20Rue%20La%20Bo%C3%A9tie%20imm%20d%2C%2075008%20Paris%2C%20France!5e0!3m2!1sfr!2stn!4v1749567055788!5m2!1sfr!2stn"
+         width="100%" height="100%" style={{ border: 0 }} 
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Localisation de Forma School"></iframe>
       </div>
 
       {/* Section Contact principale */}
