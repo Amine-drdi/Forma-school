@@ -10,19 +10,17 @@ const FounderProfile = () => {
         {/* Title Section */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-primary mb-2">
-            Notre fondateur, un visionnaire engagé
+            Sabrina, la force motrice de notre équipe
           </h1>
-          <h2 className="text-lg text-gray-900 mb-6">
-            Emmanuel, votre partenaire de réussite
-          </h2>
+
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 p-8">
           {/* Image Section */}
           <div className="flex items-center justify-center">
             <img 
-              src="/images/zeno.jpeg" 
-              alt="Emmanuel Zenou - Fondateur de Forma school" 
+              src="../../../../public/images/dirigeant.jpg" 
+              alt="Sabrina Elkrief - Dirigeant de Forma school" 
               className="rounded-lg shadow-md w-full h-auto max-w-[800px] md:max-w-[600px] sm:max-w-[500px] object-cover"
             />
           </div>
@@ -30,39 +28,23 @@ const FounderProfile = () => {
           {/* Text Content Section */}
           <div className="flex flex-col space-y-6">
             <div className="space-y-4 text-gray-700">
-              <p className="font-medium text-gray-900">Bienvenue sur notre site !</p>
               
-              <p>
-                Je suis Emmanuel, le cerveau derrière Forma School. J'ai créé cet organisme 
-                de formation pour offrir des opportunités uniques aux professionnels du BTP. 
-                Mon objectif est simple : offrir une formation de qualité adaptée aux besoins 
-                spécifiques du secteur de la construction.
-              </p>
+             <p>
+  Je suis Sabrina, dirigeante de Forma School, un organisme de formation dédié aux professionnels du BTP.
+</p>
 
-              <p>
-                Fort de plus de 10 ans d'expérience dans la formation professionnelle, 
-                Emmanuel a lancé Forma School en 2024, avec l'ambition d'apporter des 
-                solutions flexibles et pratiques aux professionnels du BTP. Il a su s'entourer 
-                d'un réseau d'experts pour concevoir des formations innovantes qui répondent aux 
-                exigences du marché du bâtiment.
-              </p>
+<p>
+Forte de plus de 10 ans d’expérience dans le domaine de la formation professionnelle, j’ai rejoint ce projet en 2024 avec une ambition claire : proposer des solutions concrètes, souples et adaptées aux réalités du secteur de la construction.</p>
 
-              <p>
-                Chez Forma School, nous croyons que chaque professionnel du bâtiment mérite 
-                une formation accessible, flexible et surtout axée sur des compétences pratiques. 
-                C'est pourquoi nous avons conçu des parcours de formation adaptés aux horaires 
-                des travailleurs du secteur, afin de leur permettre de se former tout en continuant 
-                à exercer leur activité.
-              </p>
+<p>
+Entourée d’un réseau d’experts, je veille au développement de programmes innovants, conçus pour répondre aux exigences du terrain et accompagner les évolutions du marché. Ma mission est de garantir la qualité et la pertinence des formations proposées, afin de permettre à chaque professionnel du BTP de se former efficacement et de faire évoluer sa carrière.</p>
 
-              <p>
-                Rejoignez-nous dès aujourd'hui pour découvrir nos formations et donner un nouvel élan 
-                à votre carrière dans le secteur du BTP !
-              </p>
+
+
 
               <div className="pt-4 border-t border-gray-200">
-                <p className="font-semibold text-primary">Emmanuel Zenou</p>
-                <p className="text-gray-600">Fondateur de Forma school</p>
+                <p className="font-semibold text-primary">Sabrina Elkrief</p>
+                <p className="text-gray-600">Dirigeante de Forma school</p>
               </div>
             </div>
           </div>

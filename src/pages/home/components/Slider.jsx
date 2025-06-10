@@ -17,7 +17,7 @@ const Hero = () => {
     <section className="w-full h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-tr from-orange-50 via-white to-white overflow-hidden">
       
       {/* Texte à gauche avec animation */}
-      <div className="w-full md:w-1/2 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24 text-left space-y-6">
+      <div className="w-full md:w-1/2 h-full flex flex-col justify-center px-6 md:px-16 lg:px-24 text-left space-y-6 mb-16">
         <motion.h1
           custom={0}
           initial="hidden"

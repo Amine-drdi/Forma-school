@@ -1,96 +1,77 @@
 import React from "react";
 import {
-  TbCircleNumber1Filled,
-  TbCircleNumber2Filled,
-  TbCircleNumber3Filled,
-  TbCircleNumber4Filled,
-  TbCircleNumber5Filled,
-  TbCircleNumber6Filled,
+  TbMessage2Share,
+  TbUserShield,
+  TbDeviceMobileMessage,
+  TbUsersGroup,
+  TbCertificate,
+  TbCashBanknote,
 } from "react-icons/tb";
 
 const steps = [
   {
-    icon: TbCircleNumber1Filled,
-    title: "Prenez contact avec un expert",
-    description:
-      "Nos conseillers vous guident dès le départ pour définir votre projet et débloquer les aides disponibles.",
+    icon: <TbMessage2Share className="text-orange-600 w-10 h-10" />,
+    title: "Conseil personnalisé",
+    description: "Un expert vous oriente selon vos besoins et les financements éligibles.",
   },
   {
-    icon: TbCircleNumber2Filled,
-    title: "Accédez à votre espace personnel",
-    description:
-      "Un lien d'accès sécurisé vous permet de suivre votre formation et vos documents à tout moment.",
+    icon: <TbUserShield className="text-orange-600 w-10 h-10" />,
+    title: "Connexion sécurisée",
+    description: "Vous accédez à votre espace en ligne pour gérer votre parcours simplement.",
   },
   {
-    icon: TbCircleNumber3Filled,
-    title: "Avancez à votre rythme",
-    description:
-      "Plateforme 100% flexible, accessible 24/7 sur tous vos appareils. Vous êtes libre d’apprendre à votre façon.",
+    icon: <TbDeviceMobileMessage className="text-orange-600 w-10 h-10" />,
+    title: "Flexibilité totale",
+    description: "Suivez votre formation 24h/24 depuis votre téléphone, tablette ou ordinateur.",
   },
   {
-    icon: TbCircleNumber4Filled,
-    title: "Participez à la communauté",
-    description:
-      "Discutez avec d’autres apprenants, posez vos questions, échangez avec les formateurs.",
+    icon: <TbUsersGroup className="text-orange-600 w-10 h-10" />,
+    title: "Communauté active",
+    description: "Posez vos questions, échangez avec les formateurs et autres apprenants.",
   },
   {
-    icon: TbCircleNumber5Filled,
-    title: "Recevez votre attestation",
-    description:
-      "Une fois la formation validée, nous vous remettons une attestation officielle reconnue.",
+    icon: <TbCertificate className="text-orange-600 w-10 h-10" />,
+    title: "Attestation délivrée",
+    description: "Une fois la formation complétée, vous recevez une attestation officielle.",
   },
   {
-    icon: TbCircleNumber6Filled,
-    title: "Touchez vos indemnités",
-    description:
-      "L’ANDPC effectue le virement de vos indemnités directement sur votre compte.",
+    icon: <TbCashBanknote className="text-orange-600 w-10 h-10" />,
+    title: "Indemnisation rapide",
+    description: "L’ANDPC vous reverse les indemnités directement sur votre compte.",
   },
 ];
 
-const Timeline = () => {
+export default function Timeline() {
   return (
     <section className="bg-white py-20 px-6 sm:px-10">
-      <div className="text-center max-w-4xl mx-auto mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800">
-        Prêt à vous lancer ? 
+      <div className="text-center max-w-3xl mx-auto mb-14">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          Un parcours simple, fluide et pensé pour vous
         </h2>
-        <p className="mt-4 text-gray-600 text-base md:text-lg leading-relaxed">
-        Inscription, constitution de votre dossier, aide au financement : chaque étape est intuitive et guidée.
+        <p className="text-gray-600 text-lg">
+          Chaque étape est conçue pour vous accompagner, de l'inscription à l'obtention de vos indemnités.
         </p>
       </div>
 
-      <div className="relative max-w-6xl mx-auto">
-        {/* Ligne verticale */}
-        <div className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-transparent via-[#c86104] to-transparent z-0" />
-
-        <div className="flex flex-col gap-12 relative z-10">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`relative flex items-start md:items-center gap-6 ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
-            >
-              {/* Badge numéro */}
-              <div className="z-10 w-14 h-14 flex items-center justify-center rounded-full bg-[#fdeee3] text-[#c86104] shadow-md">
-                <step.icon className="w-7 h-7" />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="group bg-orange-50 border border-orange-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="bg-orange-100 rounded-full p-3">
+                {step.icon}
               </div>
-
-              {/* Carte d'étape */}
-              <div
-                className="w-full md:w-1/2 bg-white border border-orange-100 rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              >
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-gray-600">{step.description}</p>
-              </div>
+              <span className="text-sm text-orange-600 font-semibold">Étape {index + 1}</span>
             </div>
-          ))}
-        </div>
+            <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+              {step.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default Timeline;
+}

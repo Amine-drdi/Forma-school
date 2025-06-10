@@ -57,6 +57,7 @@ export const btpCategories = [
     name: " CACES R489 - Conduite de Chariots Élévateurs (Catégories 1A, 3, 5)",
     icon: FaEnvira,
   },
+
 ];
 
 

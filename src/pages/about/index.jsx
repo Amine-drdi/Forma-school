@@ -4,7 +4,13 @@ import OurStory from "./components/OurStory";
 import OurMission from "./components/OurMission";
 import OurImpact from "./components/OurImpact";
 import OurApproach from "./components/OurApproach";
-import Founder from "./components/Founder";
+import 
+
+
+
+
+
+Founder from "./components/Founder";
 
 const About = () => {
   return (
@@ -14,7 +20,7 @@ const About = () => {
       <OurImpact />
       <OurMission />
       <OurApproach />
-      {/*<Founder/>*/}
+     <Founder/> 
     </div>
   );
 };

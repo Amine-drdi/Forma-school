@@ -3387,6 +3387,7 @@ certification: "Une attestation de formation sera délivrée."
 ];
 
 export const btpTrainings = [
+  
 
   {
     id: 5,

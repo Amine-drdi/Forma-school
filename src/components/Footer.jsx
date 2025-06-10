@@ -56,10 +56,10 @@ const Footer = () => {
           <div>
             <p className="text-white font-semibold mb-3">Contact</p>
             <ul className="space-y-2">
-              <li className="flex items-start gap-2"><GoHome className="text-orange-400 mt-1" /> <span>229 RUE SAINT-HONORE, 75001 PARIS</span></li>
+              <li className="flex items-start gap-2"><GoHome className="text-orange-400 mt-1" /> <span>IMMEUBLE D, 128 RUE LA BOETIE, 75008 PARIS</span></li>
               <li className="flex items-center gap-2"><MdOutlinePhone className="text-orange-400" /> 07 56 82 86 00</li>
               <li className="flex items-center gap-2"><MdOutlineMail className="text-orange-400" /> contact@forma-school.fr</li>
-              <li className="text-orange-400 font-semibold mt-2">SIRET : 932 315 914 00014</li>
+              <li className="text-orange-400 font-semibold mt-2">SIRET :<span className="text-white font-medium mt-2"> 932 315 914 00014</span></li>
             </ul>
           </div>
 
