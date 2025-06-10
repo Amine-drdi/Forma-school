@@ -1,5 +1,5 @@
 import React from 'react';
-
+import dirigeant from "../../../assets/images/dirigeant.jpg"
 const FounderProfile = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -19,7 +19,7 @@ const FounderProfile = () => {
           {/* Image Section */}
           <div className="flex items-center justify-center">
             <img 
-              src="../../../../public/images/dirigeant.jpg" 
+              src={dirigeant} 
               alt="Sabrina Elkrief - Dirigeant de Forma school" 
               className="rounded-lg shadow-md w-full h-auto max-w-[800px] md:max-w-[600px] sm:max-w-[500px] object-cover"
             />
