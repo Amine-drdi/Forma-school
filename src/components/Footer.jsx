@@ -47,7 +47,7 @@ const Footer = () => {
             <p className="text-white font-semibold mb-3">Informations légales</p>
             <ul className="space-y-2">
               <li><NavLink to="/politiques-de-confidentialite" className="hover:text-orange-400">Politique de confidentialité</NavLink></li>
-              <li><NavLink to="/conditions-generales" className="hover:text-orange-400">Conditions générales</NavLink></li>
+              {/*<li><NavLink to="/conditions-generales" className="hover:text-orange-400">Conditions générales</NavLink></li>*/}
               <li><NavLink to="/mentions-legales" className="hover:text-orange-400">Mentions légales</NavLink></li>
             </ul>
           </div>

@@ -2,7 +2,6 @@ import React from "react";
 import ContactUsForm from "./components/ContactUsForm";
 import Hero from "./components/Hero";
 import Faq from "./components/Faq";
-import contactImage from '../../assets/images/contact-us.jpg'
 
 const Contact = () => {
   return (

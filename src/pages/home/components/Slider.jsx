@@ -66,13 +66,14 @@ const Hero = () => {
 
       {/* Image à droite */}
       <div className="w-full md:w-1/2 h-full relative">
-        <img
-          src="/images/construction-training.jpg"
-          alt="formation btp"
-          className="w-full h-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-white/20 backdrop-blur-sm" />
-      </div>
+  <img
+    src="/images/construction-training.jpg"
+    alt="formation btp"
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-white/20" />
+</div>
+
     </section>
   );
 };
