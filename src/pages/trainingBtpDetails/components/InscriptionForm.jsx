@@ -8,6 +8,8 @@ import {
   MdOutlineCheckBoxOutlineBlank,
 } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const schema = yup.object().shape({
   username: yup
@@ -48,29 +50,93 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
 
   const policySelected = watch("policy");
 
-  const submit = async (values) => {
+ const submit = async (values) => {
     try {
-      console.log(values);
+      const response = await fetch('http://localhost:5000/api/users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || 'Erreur lors de l\'inscription');
+      }
+
+      // Notification de succès
+      toast.success('Inscription réussie! Bienvenue parmi nous.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        style: {
+          border: '2px solid #4BB543',
+          color: '#4BB543',
+          fontWeight: '500',
+        }
+      });
+
+      // Fermer le formulaire après 3 secondes
+      setTimeout(() => {
+        setShowInscriptionForm(false);
+      }, 3000);
+
     } catch (error) {
+      console.error('Erreur:', error);
+      
+      // Notification d'erreur
+      toast.error(error.message || 'Une erreur est survenue lors de l\'inscription', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        style: {
+          border: '2px solid #ff3333',
+          color: '#ff3333',
+          fontWeight: '500',
+        }
+      });
+
       setError("email", {
         type: "manual",
-        message: "Invalid email or password",
-      });
-      setError("phone", {
-        type: "manual",
-        message: "Invalid email or password",
+        message: error.message,
       });
     }
   };
+  
   return (
     <div className="fixed inset-0 z-[2000] w-screen h-screen flex items-center justify-center">
+ <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       <div
         className="absolute inset-0 z-[1999] w-screen h-screen bg-black/50"
         onClick={() => setShowInscriptionForm(false)}
       />
       <div className="relative z-[2001] flex xl:w-1/3 lg:w-[45%] md:w-[60%] w-[95%] h-fit bg-white rounded-lg p-8">
         <div
-          className="absolute top-5 right-5 h-8 w-8 flex items-center justify-center rounded-full bg-main_color hover:bg-[#20C997] transition-all duration-500 ease-in-out cursor-pointer"
+          className="absolute top-5 right-5 h-8 w-8 flex items-center justify-center rounded-full bg-main_color hover:bg-[#c98520] transition-all duration-500 ease-in-out cursor-pointer"
           onClick={() => setShowInscriptionForm(false)}
         >
           <MdClose className="text-white w-5 h-5" />
@@ -84,7 +150,7 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
                 id="username"
                 className={`${
                   errors.username ? "border-red-600" : "border-main_color"
-                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#20C997] transition-colors duration-200 delay-0 ease-in-expo peer`}
+                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#c98520] transition-colors duration-200 delay-0 ease-in-expo peer`}
                 placeholder=" "
                 {...register("username")}
               />
@@ -102,7 +168,7 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
                 id="job"
                 className={`${
                   errors.job ? "border-red-600" : "border-main_color"
-                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#20C997] transition-colors duration-200 delay-0 ease-in-expo peer`}
+                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#c98520] transition-colors duration-200 delay-0 ease-in-expo peer`}
                 placeholder=" "
                 {...register("job")}
               />
@@ -120,7 +186,7 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
                 id="email"
                 className={`${
                   errors.email ? "border-red-600" : "border-main_color"
-                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#20C997] transition-colors duration-200 delay-0 ease-in-expo peer`}
+                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#c98520] transition-colors duration-200 delay-0 ease-in-expo peer`}
                 placeholder=" "
                 {...register("email")}
               />
@@ -138,7 +204,7 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
                 id="phnoe"
                 className={`${
                   errors.phone ? "border-red-600" : "border-main_color"
-                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#20C997] transition-colors duration-200 delay-0 ease-in-expo peer`}
+                } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#c98520] transition-colors duration-200 delay-0 ease-in-expo peer`}
                 placeholder=" "
                 {...register("phone")}
               />
@@ -184,7 +250,7 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
               <button
                 type="submit"
                 disabled={false}
-                className={`w-full rounded-full bg-main_color hover:bg-[#20C997] transition-all duration-500 ease-in-out p-3 text-white text-base font-medium ${
+                className={`w-full rounded-full bg-main_color hover:bg-[#c98520] transition-all duration-500 ease-in-out p-3 text-white text-base font-medium ${
                   false && "cursor-not-allowed"
                 }`}
               >

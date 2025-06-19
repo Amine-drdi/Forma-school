@@ -15,7 +15,8 @@ import { useParams } from 'react-router-dom';
 
 const TrainingDetails = () => {
   const { id } = useParams(); // Récupère l'ID de l'URL
-
+ const [showInscriptionForm, setShowInscriptionForm] = useState(false);
+  const [showEligibilityForm, setShowEligibilityForm] = useState(false);
   const elementRef = useRef(null);
   const descriptionRef = useRef(null);
   const skillsRef = useRef(null);
@@ -23,8 +24,7 @@ const TrainingDetails = () => {
   const aidsRef = useRef(null);
   const testimonialsRef = useRef(null);
   const [isReached, setIsReached] = useState(false);
-  const [showInscriptionForm, setShowInscriptionForm] = useState(false);
-  const [showEligibilityForm, setShowEligibilityForm] = useState(false);
+ 
   const [toggleResults, setToggleResults] = useState("Description");
   const formation = btpTrainings.find((f) => f.id === parseInt(id)); // Conversion
   useEffect(() => {
@@ -73,6 +73,7 @@ const TrainingDetails = () => {
       <Hero setShowInscriptionForm={setShowInscriptionForm} 
         formation ={formation}
       />
+      
       <Recap formation ={formation} />
       <div className="md:px-desktop_padding sm:px-tablet_padding px-mobile_padding py-5 flex flex-col gap-14">
         <div ref={elementRef}>
@@ -81,9 +82,12 @@ const TrainingDetails = () => {
             setToggleResults={setToggleResults}
           />
         </div>
+        
         <div ref={descriptionRef}>
           <Description formation={formation}/>
         </div>
+        {/* Bouton d'inscription */}
+          
         <div ref={skillsRef}>
           <Skills formation={formation}/>
         </div>
@@ -99,28 +103,9 @@ const TrainingDetails = () => {
           <Testimonials formation={formation} />
         </div>
       </div>
-      <div
-        className={`fixed top-0 left-0 w-full z-[1500] ${
-          isReached ? "translate-y-0" : "-translate-y-full"
-        } duration-700 ease-in-out`}
-      >
-        <FixedTab
-          setShowInscriptionForm={setShowInscriptionForm}
-          toggleResults={toggleResults}
-          setToggleResults={setToggleResults}
-          formation ={formation}
-        />
-      </div>
-      {showInscriptionForm && (
-        <InscriptionForm setShowInscriptionForm={setShowInscriptionForm}
-        formation ={formation}
-        />
-      )}
-      {showEligibilityForm && (
-        <EligibilityForm setShowEligibilityForm={setShowEligibilityForm} 
-        formation ={formation}
-        />
-      )}
+     
+      
+     
     </div>
   );
 };
