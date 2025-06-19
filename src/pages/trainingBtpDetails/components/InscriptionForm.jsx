@@ -53,13 +53,13 @@ const InscriptionForm = ({ setShowInscriptionForm }) => {
  const submit = async (values) => {
     try {
       const response = await fetch('https://formaschool-backend.onrender.com/api/users/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
-
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  credentials: 'include', // if using cookies/sessions
+  body: JSON.stringify(values),
+});
       const data = await response.json();
       
       if (!response.ok) {
