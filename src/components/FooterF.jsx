@@ -15,25 +15,25 @@ const Footer = () => {
     <footer className="w-full px-4 sm:px-6 md:px-8 bg-footer_background_color text-footer_text_color">
       <div className="flex flex-col gap-8 py-8 md:py-16">
         {/* Logos section */}
-        <div className="flex justify-center items-start gap-8 w-full" >
-          <div className="w-48 h-24 bg-white flex items-center justify-center">
+        <div className="flex items-start justify-center w-full gap-8" >
+          <div className="flex items-center justify-center w-48 h-24 bg-white">
             <NavLink to="/">
               <img
-                className="w-full h-full object-contain"
+                className="object-contain w-full h-full"
                 src="/images/logoFormaSchool.png"
                 alt="Forma school"
               />
             </NavLink>
           </div>
           <div className="flex items-start gap-4">
-            <div className="w-32 h-24 bg-white flex items-center justify-center">
+            <div className="flex items-center justify-center w-32 h-24 bg-white">
               <img
                 src="/images/qualiopi.png"
                 alt="qualiopi"
-                className="w-full h-full object-contain"
+                className="object-contain w-full h-full"
               />
             </div>
-            <div className="flex flex-col justify-center text-sm max-w-xs">
+            <div className="flex flex-col justify-center max-w-xs text-sm">
               <p className="mb-1">
                 La certification qualité a été délivrée au 
               </p>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation sections - ajusté avec espacement réduit */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap- mt-4" style={{marginLeft:"300px"}}>
+        <div className="grid grid-cols-1 mt-4 md:grid-cols-4 gap-" style={{marginLeft:"300px"}}>
 
         <div className="" style={{ marginLeft: "px" }}>
   {/* Centrage global avec alignement à gauche et décalage */}
@@ -158,7 +158,7 @@ const Footer = () => {
 <div className="" style={{ paddingLeft: "20px", marginRight: "px" }}>
   {/* Titre centré */}
   <p
-    className="text-lg font-medium mb-4 text-center"
+    className="mb-4 text-lg font-medium text-center"
     style={{ marginBottom: "20px",marginRight:"220px" ,fontSize: '15px' }}
   >
     Contact
@@ -176,15 +176,15 @@ const Footer = () => {
   >
     <li className="flex items-center gap-2">
       <GoHome className="w-5 h-5" />
-      <span  style={{ fontSize: '10px' }}>229 RUE SAINT-HONORE, 75001 PARIS</span>
+      <span  style={{ fontSize: '10px' }}>IMMEUBLE D, 128 RUE LA BOETIE, 75008 PARIS</span>
     </li>
     <li className="flex items-center gap-2">
       <MdOutlinePhone className="w-5 h-5" />
-      <span  style={{ fontSize: '10px' }}>07 56 82 86 00</span>
+      <span  style={{ fontSize: '10px' }}>07 56 95 48 03</span>
     </li>
     <li className="flex items-center gap-2">
       <MdOutlineMail className="w-5 h-5" />
-      <span  style={{ fontSize: '10px' }}>contact@Forma school.fr</span>
+      <span  style={{ fontSize: '10px' }}>contact@formaschool.fr</span>
     </li>
 
   </ul>
@@ -195,9 +195,9 @@ const Footer = () => {
 
 
         {/* Social media and copyright */}
-        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 pt-8 border-t sm:flex-row">
           <p className="text-sm font-medium">&copy; {currentDate} Forma school.</p>
-          <div style={{ fontSize: '13px' }}>SIRET: 932 315 914 00014</div>
+          <div style={{ fontSize: '13px' }}>SIRET: 98284797200014</div>
 <div style={{ fontSize: '13px' }}>NDA: 11757074975 délivré par la Préfecture de Région de l'île-de-France</div>
 
           <div className="flex items-center space-x-4">
@@ -205,7 +205,7 @@ const Footer = () => {
               href="https://www.facebook.com/@Forma school"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white border border-white hover:text-primary hover:border-primary hover:bg-white transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 border border-white rounded-full bg-primary hover:text-primary hover:border-primary hover:bg-white"
             >
               <FaFacebookF className="w-5 h-5" />
             </a>
@@ -213,7 +213,7 @@ const Footer = () => {
               href="https://www.instagram.com/@Forma school"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white border border-white hover:text-primary hover:border-primary hover:bg-white transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 border border-white rounded-full bg-primary hover:text-primary hover:border-primary hover:bg-white"
             >
               <FaInstagram className="w-5 h-5" />
             </a>
@@ -221,7 +221,7 @@ const Footer = () => {
               href="https://www.linkedin.com/@Forma school"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white border border-white hover:text-primary hover:border-primary hover:bg-white transition-all duration-300"
+              className="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 border border-white rounded-full bg-primary hover:text-primary hover:border-primary hover:bg-white"
             >
               <FaLinkedinIn className="w-5 h-5" />
             </a>

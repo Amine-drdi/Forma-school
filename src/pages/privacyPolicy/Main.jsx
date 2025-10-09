@@ -71,14 +71,14 @@ const Main = () => {
           <p className="mb-4">
             La collecte, l'utilisation et la divulgation des données par nos clients sont régies séparément par leurs politiques de confidentialité. Nos clients peuvent collecter des informations sur leurs utilisateurs directement ; dans ce cas, chacun de nos clients est responsable de s'assurer que leur collecte de données respecte leurs politiques de confidentialité et conditions d'utilisation.
           </p>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <p className="font-semibold mb-2">Informations d'identification :</p>
+          <div className="p-4 rounded-lg bg-gray-50">
+            <p className="mb-2 font-semibold">Informations d'identification :</p>
             <p className="mb-3">Nom, prénom, adresse e-mail, numéro de téléphone</p>
             
-            <p className="font-semibold mb-2">Données de paiement :</p>
+            <p className="mb-2 font-semibold">Données de paiement :</p>
             <p className="mb-3">Informations bancaires (via un prestataire sécurisé)</p>
             
-            <p className="font-semibold mb-2">Données de navigation :</p>
+            <p className="mb-2 font-semibold">Données de navigation :</p>
             <p>Cookies, adresse IP, historique de connexion</p>
           </div>
         </>
@@ -90,7 +90,7 @@ const Main = () => {
       content: (
         <>
           <p className="mb-4">Les données sont utilisées pour :</p>
-          <ol className="list-decimal list-inside space-y-2 pl-4">
+          <ol className="pl-4 space-y-2 list-decimal list-inside">
             <li>Gérer l'accès aux formations et aux comptes utilisateurs.</li>
             <li>Envoyer des informations commerciales et pédagogiques (avec consentement).</li>
             <li>Améliorer l'expérience utilisateur et la sécurité du site.</li>
@@ -124,20 +124,20 @@ const Main = () => {
           <p className="mb-4">
             Pour exercer vos droits, vous pouvez nous contacter à :
           </p>
-          <div className="bg-blue-50 p-4 rounded-lg">
+          <div className="p-4 rounded-lg bg-blue-50">
             <p>
               <span className="font-semibold">Adresse:</span> 
               <span className="ml-2">IMMEUBLE D, 128 RUE LA BOETIE, 75008 PARIS</span>
             </p>
             <p >
               <span className="font-semibold">Email:</span> 
-              <a href="mailto:contact@formaschool.fr" className="text-primary ml-2 hover:underline">
+              <a href="mailto:contact@formaschool.fr" className="ml-2 text-primary hover:underline">
                 contact@formaschool.fr
               </a>
             </p>
             <p className="mb-2">
               <span className="font-semibold">Téléphone:</span> 
-              <span className="ml-2">07 56 82 86 00</span>
+              <span className="ml-2">07 56 95 48 03</span>
             </p>
             
           </div>
@@ -150,10 +150,10 @@ const Main = () => {
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="overflow-hidden bg-white shadow-md rounded-xl">
       {/* Header */}
-      <div className="border-b border-gray-200 px-8 py-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+      <div className="px-8 py-6 border-b border-gray-200">
+        <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
           Politique de confidentialité
         </h1>
         <p className="mt-2 text-gray-500">
@@ -166,7 +166,7 @@ const Main = () => {
         {sections.map((section, index) => (
           <div key={section.id} className="px-8 py-6">
             <button
-              className="flex justify-between items-center w-full text-left"
+              className="flex items-center justify-between w-full text-left"
               onClick={() => toggleSection(section.id)}
               aria-expanded={activeSections[section.id]}
               aria-controls={`section-${section.id}`}

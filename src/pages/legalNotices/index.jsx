@@ -2,11 +2,11 @@ import React from "react";
 
 const LegalNotices = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="bg-white rounded-xl shadow-md overflow-hidden p-8">
+    <div className="max-w-6xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+      <div className="p-8 overflow-hidden bg-white shadow-md rounded-xl">
         {/* Header */}
-        <div className="border-b border-gray-200 pb-6 mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="pb-6 mb-8 border-b border-gray-200">
+          <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
             Mentions légales
           </h1>
           <p className="mt-2 text-gray-500">Dernière mise à jour : 16/03/2025</p>
@@ -14,20 +14,20 @@ const LegalNotices = () => {
 
         {/* Publisher Section */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-primary mb-4 flex items-center">
-            <span className="bg-primary/10 p-2 rounded-lg mr-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <h2 className="flex items-center mb-4 text-xl font-bold text-primary">
+            <span className="p-2 mr-3 rounded-lg bg-primary/10">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </span>
             Éditeur du site
           </h2>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <p className="text-gray-700 mb-4">
+          <div className="p-6 rounded-lg bg-gray-50">
+            <p className="mb-4 text-gray-700">
               Le présent site est édité, hébergé et géré par la société Forma school, un organisme de formation
               dédié à la montée en compétences des professionnels et des entreprises.
             </p>
-            <div className="grid md:grid-cols-2 gap-4 mt-4">
+            <div className="grid gap-4 mt-4 md:grid-cols-2">
               <div className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -44,7 +44,7 @@ const LegalNotices = () => {
                 </svg>
                 <div>
                   <p className="font-semibold text-gray-800">Téléphone :</p>
-                  <p className="text-gray-600">07 56 82 86 00</p>
+                  <p className="text-gray-600">07 56 95 48 03</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -62,7 +62,7 @@ const LegalNotices = () => {
                 </svg>
                 <div>
                   <p className="font-semibold text-gray-800">SIRET :</p>
-                  <p className="text-gray-600">932 315 914 00014</p>
+                  <p className="text-gray-600">98284797200014</p>
                 </div>
               </div>
             </div>
@@ -71,16 +71,16 @@ const LegalNotices = () => {
 
         {/* User Rights Section */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-primary mb-6 flex items-center">
-            <span className="bg-primary/10 p-2 rounded-lg mr-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <h2 className="flex items-center mb-6 text-xl font-bold text-primary">
+            <span className="p-2 mr-3 rounded-lg bg-primary/10">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </span>
             Droits des utilisateurs
           </h2>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <p className="text-gray-700 mb-6">
+          <div className="p-6 rounded-lg bg-gray-50">
+            <p className="mb-6 text-gray-700">
               Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
             </p>
             <div className="space-y-4">
@@ -112,8 +112,8 @@ const LegalNotices = () => {
                 }
               ].map((right, index) => (
                 <div key={index} className="flex items-start p-4 bg-white rounded-lg shadow-sm">
-                  <div className="bg-primary/10 p-2 rounded-full mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="p-2 mr-4 rounded-full bg-primary/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={right.icon} />
                     </svg>
                   </div>
@@ -129,11 +129,11 @@ const LegalNotices = () => {
 
         {/* Contact Section */}
         <section>
-          <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-            <h2 className="text-lg font-semibold text-gray-800 mb-3">Besoin d'aide ?</h2>
+          <div className="p-6 border border-blue-100 rounded-lg bg-blue-50">
+            <h2 className="mb-3 text-lg font-semibold text-gray-800">Besoin d'aide ?</h2>
             <p className="text-gray-700">
               Pour toute question ou demande de clarification supplémentaire, veuillez nous contacter par courriel à {' '}
-              <a href="mailto:contact@formaschool.fr" className="text-primary font-medium hover:underline">
+              <a href="mailto:contact@formaschool.fr" className="font-medium text-primary hover:underline">
                 contact@formaschool.fr
               </a>.
             </p>

@@ -32,7 +32,7 @@ const Header = () => {
       {/* ✅ VERSION MOBILE (smartphone) */}
       <div className="flex items-center justify-between px-4 py-3 lg:hidden">
         <button onClick={() => setActiveMenu(!activeMenu)}>
-          <MdMenu className="w-7 h-7 text-gray-700" />
+          <MdMenu className="text-gray-700 w-7 h-7" />
         </button>
         <NavLink to="/">
           <img src="/images/logoFormaSchool.png" alt="Logo" className="h-10" />
@@ -40,9 +40,9 @@ const Header = () => {
       </div>
 
       {/* ✅ VERSION DESKTOP */}
-      <div className="hidden lg:flex flex-col relative">
+      <div className="relative flex-col hidden lg:flex">
         {/* Niveau 1 : Contact + Recherche */}
-        <div className="w-full px-8 lg:px-16 py-3 flex flex-row items-center justify-between gap-4">
+        <div className="flex flex-row items-center justify-between w-full gap-4 px-8 py-3 lg:px-16">
           {/* Espace vide à gauche pour équilibrer le layout */}
           <div className="w-48"></div>
           
@@ -51,13 +51,13 @@ const Header = () => {
             <input
               type="text"
               placeholder="Rechercher une formation BTP..."
-              className="w-full border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
 
             {searchTerm.length > 0 && (
-              <div className="absolute top-full mt-20 w-full bg-white border border-orange-200 rounded-lg shadow-md z-50 max-h-64 overflow-y-auto">
+              <div className="absolute z-50 w-full mt-20 overflow-y-auto bg-white border border-orange-200 rounded-lg shadow-md top-full max-h-64">
                 {btpCategories
                   .filter((cat) =>
                     cat.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -76,42 +76,42 @@ const Header = () => {
                 {btpCategories.filter((cat) =>
                   cat.name.toLowerCase().includes(searchTerm.toLowerCase())
                 ).length === 0 && (
-                  <p className="px-4 py-2 text-sm text-gray-500 italic">Aucune formation trouvée</p>
+                  <p className="px-4 py-2 text-sm italic text-gray-500">Aucune formation trouvée</p>
                 )}
               </div>
             )}
           </div>
 
           {/* Infos contact à droite */}
-          <div className="flex flex-row gap-6 text-sm text-gray-700 items-center">
+          <div className="flex flex-row items-center gap-6 text-sm text-gray-700">
             <div className="flex items-center gap-2">
-              <LiaPhoneVolumeSolid className="text-primary w-5 h-5" />
-              <span className="font-medium">07 56 82 86 00</span>
+              <LiaPhoneVolumeSolid className="w-5 h-5 text-primary" />
+              <span className="font-medium">07 56 95 48 03</span>
             </div>
             <div className="flex items-center gap-2">
-              <MdOutlineMail className="text-primary w-5 h-5" />
-              <a href="mailto:contact@forma-school.fr" className="hover:text-primary font-medium hover:underline">contact@forma-school.fr</a>
+              <MdOutlineMail className="w-5 h-5 text-primary" />
+              <a href="mailto:contact@formaschool.fr" className="font-medium hover:text-primary hover:underline">contact@formaschool.fr</a>
             </div>
           </div>
         </div>
 
         {/* Logo positionné entre les deux niveaux */}
-        <div className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 z-10">
+        <div className="absolute z-10 -translate-y-1/2 left-8 lg:left-16 top-1/2">
           <NavLink to="/">
             <img 
               src="/images/logoFormaSchool.png" 
               alt="Logo" 
-              className="h-16 object-contain" 
+              className="object-contain h-16" 
             />
           </NavLink>
         </div>
 
         {/* Niveau 2 : Navigation principale */}
-        <header className="w-full bg-white shadow-sm px-8 lg:px-16 h-16 flex items-center justify-center relative">
+        <header className="relative flex items-center justify-center w-full h-16 px-8 bg-white shadow-sm lg:px-16">
           {/* Décalage pour compenser le logo */}
           <div className="w-48"></div>
           
-          <nav className="flex items-center gap-10 text-sm font-medium relative">
+          <nav className="relative flex items-center gap-10 text-sm font-medium">
             <NavLink to="/" className="text-gray-700 hover:text-primary">Accueil</NavLink>
 
             {/* BTP Dropdown */}
@@ -128,13 +128,13 @@ const Header = () => {
 
               {openDropdown === "btp" && (
                 <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white border border-gray-200 shadow-xl rounded-xl p-6 w-[90vw] max-w-6xl z-50 ml-36">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Nos formations BTP</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mr-10">
+                  <h3 className="mb-4 text-lg font-semibold text-gray-800">Nos formations BTP</h3>
+                  <div className="grid grid-cols-1 gap-4 mr-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                     {btpCategories.map((cat) => (
                       <NavLink
                         key={cat.id}
                         to={`/formations/btp/${cat.id}`}
-                        className="block bg-gray-50 hover:bg-primary/10 hover:text-primary text-gray-800 border border-gray-200 px-5 py-3 rounded-lg text-sm transition duration-200 shadow-sm"
+                        className="block px-5 py-3 text-sm text-gray-800 transition duration-200 border border-gray-200 rounded-lg shadow-sm bg-gray-50 hover:bg-primary/10 hover:text-primary"
                       >
                         {cat.name}
                       </NavLink>
@@ -162,13 +162,13 @@ const Header = () => {
 
               {openDropdown === "finance" && (
                 <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white border border-gray-200 shadow-xl rounded-xl p-6 w-[90vw] max-w-6xl z-50 pr-10">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Nos solutions de financement</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mr-10">
+                  <h3 className="mb-4 text-lg font-semibold text-gray-800">Nos solutions de financement</h3>
+                  <div className="grid grid-cols-1 gap-4 mr-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                     {[{ id: "CPF", name: "CPF" }, { id: "Opco", name: "OPCO" }, { id: "poleEmploi", name: "Pôle Emploi" }, { id: "fiphfp", name: "FIPHFP" }, { id: "agefiph", name: "AGEFIPH" }].map((fin) => (
                       <NavLink
                         key={fin.id}
                         to={`/${fin.id}`}
-                        className="block bg-gray-50 hover:bg-primary/10 hover:text-primary text-gray-800 border border-gray-200 px-5 py-3 rounded-lg text-sm transition duration-200 shadow-sm"
+                        className="block px-5 py-3 text-sm text-gray-800 transition duration-200 border border-gray-200 rounded-lg shadow-sm bg-gray-50 hover:bg-primary/10 hover:text-primary"
                       >
                         {fin.name}
                       </NavLink>

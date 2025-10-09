@@ -8,22 +8,22 @@ const Footer = () => {
   const currentDate = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-gradient-to-b from-gray-900 to-gray-800 text-gray-200 px-4 sm:px-6 pt-12 pb-8">
-      <div className="max-w-7xl mx-auto">
+    <footer className="w-full px-4 pt-12 pb-8 text-gray-200 bg-gradient-to-b from-gray-900 to-gray-800 sm:px-6">
+      <div className="mx-auto max-w-7xl">
         {/* Top Section */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid gap-8 mb-12 md:grid-cols-2">
           {/* About Section */}
-          <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <div className="flex-shrink-0 bg-white p-2 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <div className="flex flex-col items-start gap-6 sm:flex-row">
+            <div className="flex-shrink-0 p-2 transition duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105">
               <img 
                 src="/images/logoFormaSchool.png" 
                 alt="Logo Forma School" 
-                className="w-24 h-16 object-contain" 
+                className="object-contain w-24 h-16" 
               />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white mb-2">Forma School</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <h3 className="mb-2 text-lg font-semibold text-white">Forma School</h3>
+              <p className="text-sm leading-relaxed text-gray-300">
                 Organisme de formation dédié à la montée en compétences des professionnels et des entreprises.
                 Nous combinons expertise et pédagogie innovante pour des formations adaptées aux exigences du marché.
               </p>
@@ -31,17 +31,17 @@ const Footer = () => {
           </div>
 
           {/* Certification Section */}
-          <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <div className="flex-shrink-0 bg-white p-2 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <div className="flex flex-col items-start gap-6 sm:flex-row">
+            <div className="flex-shrink-0 p-2 transition duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105">
               <img 
                 src="/images/logo-qualiopi.jpeg" 
                 alt="Logo Qualiopi" 
-                className="w-24 h-16 object-contain" 
+                className="object-contain w-24 h-16" 
               />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white mb-2">Certification Qualiopi</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <h3 className="mb-2 text-lg font-semibold text-white">Certification Qualiopi</h3>
+              <p className="text-sm leading-relaxed text-gray-300">
                 Certifié pour les actions de formation (L.6313-1 - 1°).
                 Cette certification atteste de la qualité de nos processus conformément au référentiel national.
               </p>
@@ -50,37 +50,37 @@ const Footer = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Discover Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b border-orange-500 pb-2 inline-block">
+            <h3 className="inline-block pb-2 text-lg font-semibold text-white border-b border-orange-500">
               Découvrir
             </h3>
             <ul className="space-y-3">
               <li>
                 <NavLink 
                   to="/formations/categorie/btp" 
-                  className="flex items-center text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                  className="flex items-center text-gray-300 transition-colors duration-300 hover:text-orange-400"
                 >
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 mr-3 bg-orange-400 rounded-full"></span>
                   Bâtiment
                 </NavLink>
               </li>
               <li>
                 <NavLink 
                   to="/a-propos" 
-                  className="flex items-center text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                  className="flex items-center text-gray-300 transition-colors duration-300 hover:text-orange-400"
                 >
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 mr-3 bg-orange-400 rounded-full"></span>
                   Qui sommes-nous
                 </NavLink>
               </li>
               <li>
                 <NavLink 
                   to="/contact" 
-                  className="flex items-center text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                  className="flex items-center text-gray-300 transition-colors duration-300 hover:text-orange-400"
                 >
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 mr-3 bg-orange-400 rounded-full"></span>
                   Contactez-nous
                 </NavLink>
               </li>
@@ -89,25 +89,25 @@ const Footer = () => {
 
           {/* Legal Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b border-orange-500 pb-2 inline-block">
+            <h3 className="inline-block pb-2 text-lg font-semibold text-white border-b border-orange-500">
               Informations légales
             </h3>
             <ul className="space-y-3">
               <li>
                 <NavLink 
                   to="/politiques-de-confidentialite" 
-                  className="flex items-center text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                  className="flex items-center text-gray-300 transition-colors duration-300 hover:text-orange-400"
                 >
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 mr-3 bg-orange-400 rounded-full"></span>
                   Politique de confidentialité
                 </NavLink>
               </li>
               <li>
                 <NavLink 
                   to="/mentions-legales" 
-                  className="flex items-center text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                  className="flex items-center text-gray-300 transition-colors duration-300 hover:text-orange-400"
                 >
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 mr-3 bg-orange-400 rounded-full"></span>
                   Mentions légales
                 </NavLink>
               </li>
@@ -116,26 +116,27 @@ const Footer = () => {
 
           {/* Contact Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b border-orange-500 pb-2 inline-block">
+            <h3 className="inline-block pb-2 text-lg font-semibold text-white border-b border-orange-500">
               Contact
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-300">
-                <GoHome className="text-orange-400 mt-1 flex-shrink-0" />
+                <GoHome className="flex-shrink-0 mt-1 text-orange-400" />
                 <span>IMMEUBLE D, 128 RUE LA BOETIE, 75008 PARIS</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
+              <li className="flex items-center gap-3 text-gray-300 transition-colors duration-300 hover:text-orange-400">
                 <MdOutlinePhone className="text-orange-400" />
-                07 56 82 86 00
+                07 56 95 48 03
               </li>
-              <li className="flex items-center gap-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
+              <li className="flex items-center gap-3 text-gray-300 transition-colors duration-300 hover:text-orange-400">
                 <MdOutlineMail className="text-orange-400" />
-                contact@forma-school.fr
+            <a href="mailto:contact@formaschool.fr" className="font-medium hover:text-primary hover:underline">contact@formaschool.fr</a>
+
               </li>
               <li className="flex items-center gap-3 mt-4">
                 <MdOutlineBusiness className="text-orange-400" />
                 <span className="text-gray-300">
-                  <span className="font-semibold text-orange-400">SIRET :</span> 932 315 914 00014
+                  <span className="font-semibold text-orange-400">SIRET :</span> 98284797200014
                 </span>
               </li>
             </ul>
@@ -143,10 +144,10 @@ const Footer = () => {
 
           {/* Map Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b border-orange-500 pb-2 inline-block">
+            <h3 className="inline-block pb-2 text-lg font-semibold text-white border-b border-orange-500">
               Localisation
             </h3>
-            <div className="overflow-hidden rounded-lg shadow-lg border border-gray-700 hover:border-orange-400 transition-all duration-300">
+            <div className="overflow-hidden transition-all duration-300 border border-gray-700 rounded-lg shadow-lg hover:border-orange-400">
               <iframe
                 title="Google Maps Location"
                 className="w-full h-48"
@@ -160,8 +161,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 mt-4 border-t border-gray-700">
-          <p className="text-gray-400 text-sm mb-4 sm:mb-0">
+        <div className="flex flex-col items-center justify-between pt-8 mt-4 border-t border-gray-700 sm:flex-row">
+          <p className="mb-4 text-sm text-gray-400 sm:mb-0">
             &copy; 2024 Forma school. Tous droits réservés.
           </p>
           <div className="flex gap-5">
@@ -169,7 +170,7 @@ const Footer = () => {
               href="https://www.facebook.com" 
               target="_blank" 
               rel="noreferrer" 
-              className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-lg"
+              className="text-lg text-gray-300 transition-colors duration-300 hover:text-orange-400"
               aria-label="Facebook"
             >
               <FaFacebookF />
@@ -178,7 +179,7 @@ const Footer = () => {
               href="https://www.instagram.com" 
               target="_blank" 
               rel="noreferrer" 
-              className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-lg"
+              className="text-lg text-gray-300 transition-colors duration-300 hover:text-orange-400"
               aria-label="Instagram"
             >
               <FaInstagram />
@@ -187,7 +188,7 @@ const Footer = () => {
               href="https://www.linkedin.com" 
               target="_blank" 
               rel="noreferrer" 
-              className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-lg"
+              className="text-lg text-gray-300 transition-colors duration-300 hover:text-orange-400"
               aria-label="LinkedIn"
             >
               <FaLinkedinIn />
